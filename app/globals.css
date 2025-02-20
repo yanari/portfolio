@@ -1,1 +1,6 @@
 @import "tailwindcss";
+
+@theme {
+  --color-primary: #8ACE00;
+  --spacing-navBarMobile: 5rem;
+}

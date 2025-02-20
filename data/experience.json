@@ -25,6 +25,16 @@
         ]
     },
     {
+        "name": "produtora.dev",
+        "summary": "Redesigned in VueJS a methoreological company website with complex charts and designed a Flutter app for a video-based startup.",
+        "date": "09/2020 - 07/2021",
+        "skills": [
+            "Flutter",
+            "VueJS",
+            "React Native"
+        ]
+    },
+    {
         "name": "wepulse",
         "summary": "Created a health services web platform using ReactJS and Redux, applied agile methodologies for project management, optimized usability and performance, and ensured best practices in web development.",
         "date": "09/2019 - 02/2020",

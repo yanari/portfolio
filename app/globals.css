@@ -1,6 +1,42 @@
 @import "tailwindcss";
 
 @theme {
-  --color-primary: #8ACE00;
-  --spacing-navBarMobile: 5rem;
+    --color-primary: #8ACE00;
+    --color-tokyo-night-dark: #1a1b26;
+    --color-tokyo-night-dark-secondary: #627C85;
+
+    --color-atom-one-dark: #282c34;
+
+    --spacing-navBarMobile: 5rem;
+
+    /* --font-sans: var(--font-montserrat-sans); */
+    /* --font-mono: var(--font-ibm-mono); */
+
+    --animate-typewriter: typewriter 2s steps(11) forwards;
+    @keyframes typewriter {
+        to {
+            left: 100%;
+        }
+    }
+
+    /* --animate-typing: typing 2s steps(20);
+    @keyframes typing {
+        0% {
+            width: 0%;
+            visibility: hidden;
+        }
+        100% {
+            width: 100%;
+        }
+    };
+
+    --animate-blink: blink .7s infinite;
+    @keyframes blink {
+        50% {
+            border-color: transparent;
+        }
+        100% {
+            border-color: white;
+        }
+    } */
 }

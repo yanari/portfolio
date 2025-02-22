@@ -1,18 +1,10 @@
 import type { Metadata } from "next";
-import { Montserrat, IBM_Plex_Mono } from "next/font/google";
+
 import "./globals.css";
-import { ThemePicker } from "@/components/ThemePicker";
+import { ThemeStoreProvider } from "@/providers/theme-provider";
+import Body from "@/components/Body";
 
-const ibmMono = IBM_Plex_Mono({
-    variable: "--font-ibm-mono",
-    weight: "400",
-    subsets: ["latin"],
-});
 
-const montserratSans = Montserrat({
-    variable: "--font-montserrat-sans",
-    subsets: ["latin"],
-});
 
 export const metadata: Metadata = {
     title: "Create Next App",
@@ -21,11 +13,8 @@ export const metadata: Metadata = {
 
 export default function RootLayout({ children }: Readonly<{children: React.ReactNode}>) {
     return (
-        <html lang="en">
-            <body className={`${ibmMono.variable} ${montserratSans.variable}`}>
-                <ThemePicker className="absolute right-4 top-4" />
-                {children}
-            </body>
-        </html>
+        <ThemeStoreProvider>
+            <Body>{children}</Body>
+        </ThemeStoreProvider>
     );
 }

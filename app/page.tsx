@@ -1,33 +1,14 @@
 "use client";
 
-import dynamic from "next/dynamic";
-
 import SectionData from "../data/menu.json";
 import Navigation from "@/components/Navigation";
 import { useVisibleSection } from "@/hooks/useVisibleSection";
-import { useTheme } from "@/context/themeProvider";
-
-const Components = {
-    about: dynamic(() => import("../sections/About"), {
-        loading: () => <p>Loading...</p>,
-    }),
-    projects: dynamic(() => import("../sections/Projects"), {
-        loading: () => <p>Loading...</p>,
-    }),
-    skills: dynamic(() => import("../sections/Skills"), {
-        loading: () => <p>Loading...</p>,
-    }),
-    experience: dynamic(() => import("../sections/Experience"), {
-        loading: () => <p>Loading...</p>,
-    }),
-    contact: dynamic(() => import("../sections/Contact"), {
-        loading: () => <p>Loading...</p>,
-    }),
-};
+import { useThemeStore } from "@/providers/theme-provider";
+import Sections from "@/sections";
 
 export default function Home() {
     const visibleSection = useVisibleSection();
-    const { themeConfig } = useTheme();
+    const { config } = useThemeStore(state => state);
     return (
         <>
             <Navigation
@@ -36,9 +17,9 @@ export default function Home() {
             />
             <main className='bg-slate-800'>
                 {SectionData.map((data, index) => {
-                    const Component = Components[data.id];
+                    const Component = Sections[data.id];
                     // TODO: select theme: vscode themes and backgrounds
-                    const color = index % 2 === 0 ? themeConfig?.background : themeConfig?.secondary;
+                    const color = index % 2 === 0 ? config?.background : config?.secondary;
 
                     return (
                         <section

@@ -26,12 +26,12 @@ export const ThemePicker: React.FC<{
                 <div className="absolute transparent right-0 -top-2 h-2 w-full"/>
                 <ul>
                     <li>
-                        <button className={`${"cursor-pointer text-left p-2 w-full hover:bg-slate-500/50"}`} onClick={() => setTheme('atom-one-dark')}>
+                        <button className={`${"cursor-pointer text-left px-4 py-2 w-full hover:bg-slate-500/50"}`} onClick={() => setTheme('atom-one-dark')}>
                             Atom One Dark
                         </button>
                     </li>
                     <li>
-                        <button className={`${"cursor-pointer text-left p-2 w-full hover:bg-slate-500/50"}`} onClick={() => setTheme('tokyo-night-dark')}>
+                        <button className={`${"cursor-pointer text-left px-4 py-2 w-full hover:bg-slate-500/50"}`} onClick={() => setTheme('tokyo-night-dark')}>
                             Tokyo Night Dark
                         </button>
                     </li>

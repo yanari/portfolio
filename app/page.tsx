@@ -1,10 +1,11 @@
 "use client";
 
-import Navigation from "@/components/Navigation";
+import dynamic from "next/dynamic";
 
 import SectionData from "../data/menu.json";
-import dynamic from "next/dynamic";
-import { useVisibleSection } from "@/hooks";
+import Navigation from "@/components/Navigation";
+import { useVisibleSection } from "@/hooks/useVisibleSection";
+import { useTheme } from "@/context/themeProvider";
 
 const Components = {
     about: dynamic(() => import("../sections/About"), {
@@ -26,6 +27,7 @@ const Components = {
 
 export default function Home() {
     const visibleSection = useVisibleSection();
+    const { themeConfig } = useTheme();
     return (
         <>
             <Navigation
@@ -36,7 +38,7 @@ export default function Home() {
                 {SectionData.map((data, index) => {
                     const Component = Components[data.id];
                     // TODO: select theme: vscode themes and backgrounds
-                    const color = index % 2 === 0 ? "bg-tokyo-night-dark" : "";
+                    const color = index % 2 === 0 ? themeConfig?.background : themeConfig?.secondary;
 
                     return (
                         <section

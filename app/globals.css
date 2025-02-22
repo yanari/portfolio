@@ -40,3 +40,11 @@
         }
     } */
 }
+
+html[data-theme="atom-one-dark"] {
+    @import "highlight.js/styles/atom-one-dark.css";
+}
+
+html[data-theme="tokyo-night-dark"] {
+    @import "highlight.js/styles/tokyo-night-dark.css";
+}

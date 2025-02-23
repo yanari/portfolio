@@ -13,19 +13,20 @@ export type CounterActions = {
 
 export type ThemeStore = ThemeState & CounterActions;
 
+const themeData: ITheme = Themes;
+
+const initialTheme = 'atom-one-dark';
+const initialConfig = themeData[initialTheme];
+
 export const defaultInitState: ThemeState = {
-    name: 'atom-one-dark',
-    config: {
-        "background": "bg-[#282c34]",
-        "secondary": "bg-slate-800",
-        "primary": "#c678dd"
-    },
+    name: initialTheme,
+    config: initialConfig,
 };
 
 export const createThemeStore = (
     initState: ThemeState = defaultInitState
 ) => {
-    const themeData: ITheme = Themes;
+    
 
     return createStore<ThemeStore>()((set) => ({
         ...initState,

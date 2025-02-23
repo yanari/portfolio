@@ -19,7 +19,7 @@ export default function Body({ children }: Readonly<{children: React.ReactNode}>
     return (
         <html lang="en" data-theme={name}>
             <body className={`${ibmMono.variable} ${montserratSans.variable}`}>
-                <ThemePicker className="absolute right-4 top-4" />
+                <ThemePicker className="fixed right-4 top-4" />
                 {children}
             </body>
         </html>

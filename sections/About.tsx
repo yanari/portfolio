@@ -17,7 +17,7 @@ export default function About() {
         hljs.highlightAll();
     }, []);
     return (
-        <div className="h-full text-gray-50 flex flex-col items-center justify-center">
+        <div className="text-lg md:text-4xl h-full text-gray-50 flex flex-col items-center justify-center">
            <pre>
                 <code className="js">
                     {javascriptCode}

@@ -12,12 +12,12 @@
     /* --font-sans: var(--font-montserrat-sans); */
     /* --font-mono: var(--font-ibm-mono); */
 
-    --animate-typewriter: typewriter 2s steps(11) forwards;
+    /* --animate-typewriter: typewriter 2s steps(11) forwards;
     @keyframes typewriter {
         to {
             left: 100%;
         }
-    }
+    } */
 
     /* --animate-typing: typing 2s steps(20);
     @keyframes typing {
@@ -39,6 +39,24 @@
             border-color: white;
         }
     } */
+
+    --typewriter: typing 7s steps(110, end), blink-caret .5s step-end infinite alternate;
+
+    @keyframes typing {
+        from {
+            width: 0;
+        }
+
+        to {
+            width: 100%;
+        }
+    }
+
+    @keyframes blink-caret {
+        50% {
+            border-color: transparent;
+        }
+    }
 }
 
 html[data-theme="atom-one-dark"] {

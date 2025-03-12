@@ -1,4 +1,4 @@
-import { useThemeStore } from "@/providers/theme-provider";
+import { useThemeStore } from "@/providers/theme";
 import React, { useState, useEffect } from "react";
 
 import SyntaxHighlighter from "react-syntax-highlighter";

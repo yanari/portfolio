@@ -1,6 +1,6 @@
 "use client";
 
-import { themes, useThemeStore } from "@/providers/theme-provider";
+import { themes, useThemeStore } from "@/providers/theme";
 import React from "react";
 
 export const ThemePicker: React.FC<{

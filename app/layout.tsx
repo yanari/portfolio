@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 
-import { ThemeStoreProvider } from "@/providers/theme-provider";
+import { ThemeStoreProvider } from "@/providers/theme";
 import Body from "@/components/Body";
 import "./globals.css";
 

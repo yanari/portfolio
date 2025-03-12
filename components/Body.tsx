@@ -1,7 +1,7 @@
 'use client'
 import { Montserrat, IBM_Plex_Mono } from "next/font/google";
 import { ThemePicker } from "./ThemePicker";
-import { useThemeStore } from "@/providers/theme-provider";
+import { useThemeStore } from "@/providers/theme";
 
 const ibmMono = IBM_Plex_Mono({
     variable: "--font-ibm-mono",

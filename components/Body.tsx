@@ -17,7 +17,7 @@ const montserratSans = Montserrat({
 export default function Body({ children }: Readonly<{children: React.ReactNode}>) {
     const { name } = useThemeStore(state => state);
     return (
-        <html lang="en" data-theme={name}>
+        <html lang="en" className={name}>
             <body className={`${ibmMono.variable} ${montserratSans.variable}`}>
                 <ThemePicker className="fixed right-4 top-4" />
                 {children}

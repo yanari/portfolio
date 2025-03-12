@@ -17,7 +17,7 @@ const Navigation: React.FC<{
     const textColor = config.primary;
 
     return (
-        <nav className="md:block hidden fixed w-navBarMobile md:w-80 h-screen md:py-40 px-8 bg-primary md:bg-transparent">
+        <nav className="md:block hidden fixed w-navBarMobile md:w-60 h-screen md:py-40 pr-8 bg-primary md:bg-transparent">
             <ul className="font-mono text-base md:text-2xl flex flex-col md:items-end justify-evenly h-full md:border-r md:border-r-gray-100 md:pr-4">
                 {menuItems.map(({ id, title }: IMenuItem) => (
                     <li key={id}>

@@ -1,25 +1,32 @@
+import { useThemeStore } from "@/providers/theme-provider";
 import React, { useState, useEffect } from "react";
-import hljs from "highlight.js";
-import javascript from "highlight.js/lib/languages/javascript";
 
-hljs.registerLanguage("javascript", javascript);
+import SyntaxHighlighter from "react-syntax-highlighter";
+import {
+    atomOneDark,
+    dracula,
+    nord
+} from "react-syntax-highlighter/dist/esm/styles/hljs";
 
 const javascriptCode = `const introduction = {
     name: 'Marcelle Yanari',
     role: 'Frontend Developer',
     yearsOfExperience: 5
-}
+};
 `;
 
+const themes:  { [key: string]: { [key: string]: React.CSSProperties } } = {
+    'dracula': dracula,
+    "atom-one-dark": atomOneDark,
+    'nord': nord
+};
+
 const Typewriter = ({ delay = 100 }) => {
+    const { name } = useThemeStore((state) => state);
+
     const [currentText, setCurrentText] = useState("");
     const [currentIndex, setCurrentIndex] = useState(0);
 
-    useEffect(() => {
-        hljs.highlightAll();
-    }, []);
-
-    // Typing logic goes here
     useEffect(() => {
         if (currentIndex < javascriptCode.length) {
             const timeout = setTimeout(() => {
@@ -33,9 +40,21 @@ const Typewriter = ({ delay = 100 }) => {
         }
     }, [currentIndex, delay]);
 
-    return <code className='js'>{currentText}</code>;
-
-    return <span>{currentText}</span>;
+    return (
+        <div className="sm:text-4xl">
+            <SyntaxHighlighter
+                customStyle={{
+                    display: "flex",
+                    alignItems: "start",
+                    justifyContent: "start",
+                }}
+                language='javascript'
+                style={themes[name]}
+            >
+                {currentText}
+            </SyntaxHighlighter>
+        </div>
+    );
 };
 
 export default Typewriter;

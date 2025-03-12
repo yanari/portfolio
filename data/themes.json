@@ -1,14 +1,20 @@
 {
-    "tokyo-night-dark": {
-        "background": "bg-[#1a1b26]",
-        "backgroundSecondary": "bg-[#1a1b26]/40",
-        "secondary": "text-[#bb9af7]",
-        "primary": "text-[#9ece6a]"
+    "dracula": {
+        "background": "bg-[#282a36]",
+        "backgroundSecondary": "bg-[#282a36]/40",
+        "secondary": "text-[#f1fa8c]",
+        "primary": "text-[#8be9fd]"
     },
     "atom-one-dark": {
         "background": "bg-[#282c34]",
         "backgroundSecondary": "bg-[#282c34]/40",
         "secondary": "text-[#c678dd]",
         "primary": "text-[#98c379]"
+    },
+    "nord": {
+        "background": "bg-[#2e3440]",
+        "backgroundSecondary": "bg-[#2e3440]/40",
+        "secondary": "text-[#81a1c1]",
+        "primary": "text-[#8fbcbb]"
     }
 }

@@ -2,43 +2,17 @@
 
 @theme {
     --color-primary: #8ACE00;
-    --color-tokyo-night-dark: #1a1b26;
-    --color-tokyo-night-dark-secondary: #627C85;
-
-    --color-atom-one-dark: #282c34;
 
     --spacing-navBarMobile: 5rem;
 
     /* --font-sans: var(--font-montserrat-sans); */
     /* --font-mono: var(--font-ibm-mono); */
 
-    /* --animate-typewriter: typewriter 2s steps(11) forwards;
-    @keyframes typewriter {
-        to {
-            left: 100%;
-        }
-    } */
+    --color-bg: #282c34;
+    --color-primary: #98c379;
+    --color-secondary: #c678dd;
 
-    /* --animate-typing: typing 2s steps(20);
-    @keyframes typing {
-        0% {
-            width: 0%;
-            visibility: hidden;
-        }
-        100% {
-            width: 100%;
-        }
-    };
-
-    --animate-blink: blink .7s infinite;
-    @keyframes blink {
-        50% {
-            border-color: transparent;
-        }
-        100% {
-            border-color: white;
-        }
-    } */
+    /* ANIMATIONS */
 
     --typewriter: typing 7s steps(110, end), blink-caret .5s step-end infinite alternate;
 
@@ -59,10 +33,30 @@
     }
 }
 
-html[data-theme="atom-one-dark"] {
-    @import "highlight.js/styles/atom-one-dark.css";
+/* Dracula Theme */
+.dracula {
+    --color-bg: #282a36;
+    --color-primary: #8be9fd;
+    --color-secondary: #f1fa8c;
 }
 
-html[data-theme="tokyo-night-dark"] {
-    @import "highlight.js/styles/tokyo-night-dark.css";
+/* Nord Theme */
+.nord {
+    --color-bg: #2e3440;
+    --color-primary: #8fbcbb;
+    --color-secondary: #81a1c1;
+}
+
+@layer utilities {
+    .bg-theme {
+        background-color: var(--color-bg);
+    }
+
+    .text-theme {
+        color: var(--color-primary);
+    }
+
+    .border-theme {
+        border-color: var(--color-secondary);
+    }
 }

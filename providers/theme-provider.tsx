@@ -15,9 +15,7 @@ export interface ThemeStoreProviderProps {
     children: ReactNode;
 }
 
-export const ThemeStoreProvider = ({
-    children,
-}: ThemeStoreProviderProps) => {
+export const ThemeStoreProvider = ({ children }: ThemeStoreProviderProps) => {
     const storeRef = useRef<ThemeStoreApi>(null);
     if (!storeRef.current) {
         storeRef.current = createThemeStore();
@@ -30,16 +28,18 @@ export const ThemeStoreProvider = ({
     );
 };
 
-export const useThemeStore = <T,>(
-    selector: (store: ThemeStore) => T
-): T => {
+export const useThemeStore = <T,>(selector: (store: ThemeStore) => T): T => {
     const themeStoreContext = useContext(ThemeStoreContext);
 
     if (!themeStoreContext) {
-        throw new Error(
-            `useThemeStore must be used within ThemeStoreProvider`
-        );
+        throw new Error(`useThemeStore must be used within ThemeStoreProvider`);
     }
 
     return useStore(themeStoreContext, selector);
 };
+
+export const themes = [
+    { id: "atom-one-dark", label: "Atom One Dark" },
+    { id: "dracula", label: "Dracula" },
+    { id: "nord", label: "Nord" },
+];

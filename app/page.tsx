@@ -17,13 +17,15 @@ export default function Home() {
                 visibleSection={visibleSection}
             />
             <main className='bg-slate-800'>
-                {SectionData.map((data) => {
+                {SectionData.map((data, index) => {
                     const Component = sections[data.id];
+
+                    const grayscale = index % 2 === 0 ? '' : 'grayscale-45';
                     return (
                         <section
                             id={data.id}
                             data-section
-                            className="bg-theme md:pl-60 m-auto text-3xl h-screen"
+                            className={`bg-theme md:pl-60 m-auto text-3xl h-screen ${grayscale}`}
                             key={data.id}
                         >
                             <Component />

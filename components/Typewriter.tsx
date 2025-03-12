@@ -17,7 +17,7 @@ const javascriptCode = `const introduction = {
 
 const themes:  { [key: string]: { [key: string]: React.CSSProperties } } = {
     'dracula': dracula,
-    "atom-one-dark": atomOneDark,
+    'atom-one-dark': atomOneDark,
     'nord': nord
 };
 

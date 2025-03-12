@@ -4,7 +4,7 @@ import { IExperience } from "@/shared/interfaces/experience.interface";
 export default function JobExperience({ experience }: { experience: IExperience}) {
     return (
         <li key={experience.name} className="rounded-md py-4">
-            <h5 className="text-2xl md:text-xl md:inline-block mr-2 text-gray-200 block">
+            <h5 className="text-2xl md:text-xl md:inline-block mr-2 text-primary block">
                 {experience.name}
             </h5>
             <span className="text-xs text-gray-400">{experience.date}</span>

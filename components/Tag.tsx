@@ -1,11 +1,11 @@
-import * as React from 'react';
+import * as React from 'react'
 
 const Tag: React.FC<{ children: React.ReactNode }> = ({ children }) => {
     return (
         <span className="text-xs rounded-xl bg-secondary text-bg py-1 px-2">
-            { children }
+            {children}
         </span>
     )
 }
 
-export default Tag;
+export default Tag

@@ -1,7 +1,11 @@
-import Tag from "./Tag";
-import { IExperience } from "@/shared/interfaces/experience.interface";
+import Tag from './Tag'
+import { IExperience } from '@/shared/interfaces/experience.interface'
 
-export default function JobExperience({ experience }: { experience: IExperience}) {
+export default function JobExperience({
+    experience,
+}: {
+    experience: IExperience
+}) {
     return (
         <li key={experience.name} className="rounded-md py-4">
             <h5 className="text-2xl md:text-xl md:inline-block mr-2 text-primary block">
@@ -19,5 +23,5 @@ export default function JobExperience({ experience }: { experience: IExperience}
                 ))}
             </ul>
         </li>
-    );
+    )
 }

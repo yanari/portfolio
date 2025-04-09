@@ -1,21 +1,21 @@
-import dynamic from "next/dynamic";
+import dynamic from 'next/dynamic'
 
 const Sections = {
-    about: dynamic(() => import("./About"), {
+    about: dynamic(() => import('./About'), {
         loading: () => <p>Loading...</p>,
     }),
-    projects: dynamic(() => import("./Projects"), {
+    projects: dynamic(() => import('./Projects'), {
         loading: () => <p>Loading...</p>,
     }),
-    skills: dynamic(() => import("./Skills"), {
+    skills: dynamic(() => import('./Skills'), {
         loading: () => <p>Loading...</p>,
     }),
-    experience: dynamic(() => import("./Experience"), {
+    experience: dynamic(() => import('./Experience'), {
         loading: () => <p>Loading...</p>,
     }),
-    contact: dynamic(() => import("./Contact"), {
+    contact: dynamic(() => import('./Contact'), {
         loading: () => <p>Loading...</p>,
     }),
-};
+}
 
-export default Sections;
+export default Sections

@@ -1,26 +1,26 @@
-"use client";
+'use client'
 
-import SectionData from "../data/menu.json";
-import Navigation from "@/components/Navigation";
-import { useVisibleSection } from "@/hooks/useVisibleSection";
-import Sections from "@/sections";
-import { ISections } from "@/shared/interfaces/section.interface";
+import SectionData from '../data/menu.json'
+import Navigation from '@/components/Navigation'
+import { useVisibleSection } from '@/hooks/useVisibleSection'
+import Sections from '@/sections'
+import { ISections } from '@/shared/interfaces/section.interface'
 
-const sections: ISections = Sections;
+const sections: ISections = Sections
 
 export default function Home() {
-    const visibleSection = useVisibleSection();
+    const visibleSection = useVisibleSection()
     return (
         <>
             <Navigation
                 menuItems={SectionData}
                 visibleSection={visibleSection}
             />
-            <main className='bg-slate-800'>
+            <main className="bg-slate-800">
                 {SectionData.map((data, index) => {
-                    const Component = sections[data.id];
+                    const Component = sections[data.id]
 
-                    const grayscale = index % 2 === 0 ? '' : 'grayscale-45';
+                    const grayscale = index % 2 === 0 ? '' : 'grayscale-45'
                     return (
                         <section
                             id={data.id}
@@ -30,9 +30,9 @@ export default function Home() {
                         >
                             <Component />
                         </section>
-                    );
+                    )
                 })}
             </main>
         </>
-    );
+    )
 }

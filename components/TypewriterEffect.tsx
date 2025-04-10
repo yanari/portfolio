@@ -48,6 +48,7 @@ export function TypewriterEffect({ code, delay = 50 }: TypewriterEffectProps) {
                             alignItems: 'start',
                             justifyContent: 'start',
                             padding: 0,
+                            overflowX: 'clip',
                         }}
                         language="javascript"
                         style={themes[theme]}

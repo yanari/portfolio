@@ -35,20 +35,22 @@ export function ThemeToggles() {
                 </Button>
             </DropdownMenuTrigger>
             <DropdownMenuContent className="bg-background" align="end">
-                {Object.entries(themeMapping).map(([key, value]) => (
-                    <DropdownMenuItem
-                        className={`px-4 py-2 font-semibold rounded-md transition-colors duration-200 ${
-                            // The theme is only available after the component is mounted.
-                            mounted && theme == key
-                                ? 'text-primary'
-                                : ' text-white'
-                        }`}
-                        onClick={() => setTheme(key)}
-                        key={key}
-                    >
-                        {value}
-                    </DropdownMenuItem>
-                ))}
+                {Object.entries(themeMapping).map(([key, value]) => {
+                    const isSelected = mounted && theme === key
+                    // The theme is only available after the component is mounted.
+                    const textColor = isSelected
+                        ? 'text-primary'
+                        : ' text-white'
+                    return (
+                        <DropdownMenuItem
+                            className={`px-4 py-2 font-semibold rounded-md transition-colors duration-200 ${textColor}`}
+                            onClick={() => setTheme(key)}
+                            key={key}
+                        >
+                            {value}
+                        </DropdownMenuItem>
+                    )
+                })}
             </DropdownMenuContent>
         </DropdownMenu>
     )

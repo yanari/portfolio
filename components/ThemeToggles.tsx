@@ -28,8 +28,8 @@ export function ThemeToggles() {
 
     return (
         <DropdownMenu>
-            <DropdownMenuTrigger asChild>
-                <Button variant="ghost" size="icon">
+            <DropdownMenuTrigger asChild className="cursor-pointer">
+                <Button variant="outline" size="icon">
                     <Palette className="h-[1.2rem] w-[1.2rem] transition-all text-primary" />
                     <span className="sr-only">Toggle theme</span>
                 </Button>

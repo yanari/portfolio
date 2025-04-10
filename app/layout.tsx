@@ -24,7 +24,7 @@ export default function RootLayout({
                     themes={['atom-one-dark', 'nord', 'dracula']}
                 >
                     <SideMenu />
-                    <header className="fixed right-6 top-6">
+                    <header className="fixed right-6 top-6 z-10">
                         <ThemeToggles />
                     </header>
                     <div className="flex-1 ml-16 md:ml-64">{children}</div>

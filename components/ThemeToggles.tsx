@@ -44,6 +44,7 @@ export function ThemeToggles() {
                                 : ' text-white'
                         }`}
                         onClick={() => setTheme(key)}
+                        key={key}
                     >
                         {value}
                     </DropdownMenuItem>

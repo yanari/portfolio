@@ -3,11 +3,17 @@ import experienceList from '@/data/experience.json'
 
 export default function Experience() {
     return (
-        <section className="text-gray-50 px-8 md:py-16 flex flex-col">
+        <div className="text-gray-50 px-8 md:py-16 flex flex-col">
+            <h2 className="mb-8 text-3xl font-[var(--font-vt323)] text-primary">
+                Experience
+            </h2>
             <ul>
                 {experienceList.map((experience) => {
                     return (
-                        <li key={experience.name} className="rounded-md py-4">
+                        <li
+                            key={experience.name}
+                            className="first:pt-0 rounded-md py-4"
+                        >
                             <h5 className="text-2xl md:text-xl md:inline-block mr-2 text-primary block">
                                 {experience.name}
                             </h5>
@@ -28,6 +34,6 @@ export default function Experience() {
                     )
                 })}
             </ul>
-        </section>
+        </div>
     )
 }

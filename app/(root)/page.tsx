@@ -16,7 +16,7 @@ export default function Home() {
                         <section
                             id={data}
                             data-section
-                            className="container px-20 py-8 bg-theme/40 m-auto text-3xl min-h-[800px] h-screen"
+                            className="container px-20 py-8 bg-theme/40 m-auto text-3xl min-h-[760px] h-screen"
                             key={data}
                         >
                             <Component />

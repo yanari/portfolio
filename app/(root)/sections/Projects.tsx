@@ -26,7 +26,7 @@ const projects: Project[] = [
             '/images/neuro_timer_3.png',
         ],
         githubLink: 'https://github.com/yanari/neurotimer',
-        link: 'neurotimer.vercel.app',
+        link: 'https://neurotimer.vercel.app',
     },
     {
         title: "What's Your Elemental Sign?",
@@ -39,7 +39,7 @@ const projects: Project[] = [
             '/images/whats_your_elemental_sign_3.png',
         ],
         githubLink: 'https://github.com/yanari/whats_your_elemental_sign',
-        link: 'whatyourelementalsign.vercel.app',
+        link: 'https://whatyourelementalsign.vercel.app',
     },
     // Add more projects as needed
 ]
@@ -47,7 +47,7 @@ const projects: Project[] = [
 export default function Projects() {
     return (
         <div className="px-4">
-            <h2 className="mb-4 text-3xl font-[var(--font-vt323)] text-primary">
+            <h2 className="mb-8 text-3xl font-[var(--font-vt323)] text-primary">
                 Projects
             </h2>
             <div className="grid gap-10">
@@ -83,10 +83,16 @@ export default function Projects() {
                                     {project.description}
                                 </p>
                                 <div className="flex gap-6">
-                                    <Link href={project.githubLink}>
+                                    <Link
+                                        rel="noopener noreferrer"
+                                        href={project.githubLink}
+                                    >
                                         <SiGithub size={40} />
                                     </Link>
-                                    <Link href={project.link}>
+                                    <Link
+                                        rel="noopener noreferrer"
+                                        href={project.link}
+                                    >
                                         <ExternalLink size={40} />
                                     </Link>
                                 </div>

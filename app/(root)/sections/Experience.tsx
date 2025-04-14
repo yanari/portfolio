@@ -1,4 +1,4 @@
-import Tag from '@/components/Tag'
+import Tag from '@/components/ui/Tag'
 import experienceList from '@/data/experience.json'
 
 export default function Experience() {

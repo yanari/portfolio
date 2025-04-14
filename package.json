@@ -9,6 +9,7 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@icons-pack/react-simple-icons": "^12.6.0",
     "@radix-ui/react-dropdown-menu": "^2.1.7",
     "@radix-ui/react-slot": "^1.2.0",
     "@uidotdev/usehooks": "^2.4.1",

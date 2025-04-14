@@ -1,13 +1,18 @@
 import './globals.css'
 import { ThemeProvider } from '../providers/theme'
-import { ThemeToggles } from '@/components/ThemeToggles'
-import SideMenu from '@/components/SideMenu'
+import { ThemeToggles } from '@/components/layout/ThemeToggles'
+import SideMenu from '@/components/layout/SideMenu'
 
-import { Fira_Mono } from 'next/font/google'
+import { Fira_Mono, VT323 } from 'next/font/google'
 
 const firaMono = Fira_Mono({
     weight: ['400', '500'],
     variable: '--font-mono',
+})
+
+const vt323 = VT323({
+    weight: ['400'],
+    variable: '--font-vt323',
 })
 
 export default function RootLayout({
@@ -17,7 +22,9 @@ export default function RootLayout({
 }) {
     return (
         <html lang="en" suppressHydrationWarning>
-            <body className={`min-h-screen bg-background ${firaMono.variable}`}>
+            <body
+                className={`min-h-screen bg-background ${firaMono.variable} ${vt323.variable}`}
+            >
                 <ThemeProvider
                     defaultTheme="atom-one-dark"
                     enableColorScheme

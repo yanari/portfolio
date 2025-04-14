@@ -1,6 +1,6 @@
 'use client'
 
-import { TypewriterEffect } from '@/components/TypewriterEffect'
+import { TypewriterEffect } from '@/components/ui/TypewriterEffect'
 import { useWindowSize } from '@uidotdev/usehooks'
 
 const desktopText = `const about = {

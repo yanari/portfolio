@@ -7,11 +7,13 @@ import { Fira_Mono, VT323 } from 'next/font/google'
 
 const firaMono = Fira_Mono({
     weight: ['400', '500'],
+    subsets: ['latin'],
     variable: '--font-mono',
 })
 
 const vt323 = VT323({
     weight: ['400'],
+    subsets: ['latin'],
     variable: '--font-vt323',
 })
 

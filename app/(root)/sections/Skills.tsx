@@ -10,7 +10,10 @@ export default function Skills() {
             <h2 className="mb-8 text-3xl font-[var(--font-vt323)] text-primary">
                 Stack
             </h2>
-            <div className="grid grid-cols-2 gap-12 text-slate-800">
+            <div className="grid md:grid-cols-2 gap-12 text-slate-800">
+                <div className="md:col-start-2 md:row-span-4 bg-white">
+                    {/* Foto Minha */}
+                </div>
                 <div className="bg-primary p-8 rounded-4xl">
                     <h4 className="text-2xl mb-4">Frontend</h4>
                     <p className="text-base font-mono">
@@ -29,7 +32,6 @@ export default function Skills() {
                         </VerticalCutReveal>
                     </p>
                 </div>
-                <div></div>
                 <div className="flex items-center justify-between">
                     <div className="bg-secondary p-8 rounded-4xl w-3/4">
                         <h4 className="text-2xl mb-4">Styles</h4>
@@ -56,7 +58,6 @@ export default function Skills() {
                         </Link>
                     </Float>
                 </div>
-                <div></div>
                 <div className="flex items-center justify-between">
                     <Link
                         className="rounded-full"

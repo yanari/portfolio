@@ -59,13 +59,13 @@ export default function Skills() {
                     </Float>
                 </div>
                 <div className="flex items-center justify-between">
-                    <Link
-                        className="rounded-full"
-                        href="/projects"
-                        aria-label="More projects"
-                    >
-                        <MoreHorizontal size={48} className="text-primary" />
-                    </Link>
+                    <p className="flex-1/2 text-white/80 text-sm">
+                        Some of my{' '}
+                        <span className="font-semibold italic">
+                            favorite technologies
+                        </span>
+                        ...
+                    </p>
                     <div className="bg-primary p-8 rounded-4xl w-3/4">
                         <p className="text-base font-mono">
                             <VerticalCutReveal

@@ -3,7 +3,8 @@ import Image from 'next/image'
 import Link from 'next/link'
 
 import { SiGithub } from '@icons-pack/react-simple-icons'
-import { ExternalLink } from 'lucide-react'
+import { ArrowRight, ExternalLink } from 'lucide-react'
+import UnderlineToBackground from '@/fancy/components/text/underline-to-background'
 
 interface Project {
     title: string
@@ -51,22 +52,25 @@ export default function Projects() {
                 Projects
             </h2>
             <div className="grid gap-10">
-                {projects.map((project) => {
+                {projects.map((project, index) => {
+                    const isOdd = (index + 1) % 2 !== 0
                     return (
                         <div
-                            className="grid md:grid-cols-[2fr_2fr] gap-10"
+                            className="grid md:grid-cols-[1fr_1fr] gap-10"
                             key={project.title}
                         >
-                            <div className="rounded-full relative mb-3 md:mb-0">
+                            <div className="rounded-full max-w-[460px] relative mb-3 md:mb-0">
                                 <Image
                                     className="rounded-xl"
                                     alt={project.title}
                                     src={project.imageUrls[0]}
+                                    // height={331}
                                     height={368}
                                     width={588}
+                                    // width={529}
                                 />
                             </div>
-                            <div className="">
+                            <div className={isOdd ? '-order-1' : ''}>
                                 <h3 className="mb-4 text-3xl">
                                     {project.title}
                                 </h3>
@@ -100,6 +104,21 @@ export default function Projects() {
                         </div>
                     )
                 })}
+                <div className="w-full flex justify-end">
+                    <Link
+                        className="flex items-center text-lg gap-2 text-primary"
+                        href="/projects"
+                        aria-label="Some other projects"
+                    >
+                        <UnderlineToBackground
+                            label="More projects"
+                            targetTextColor="#f0f0f0"
+                            className="cursor-pointer"
+                        />
+
+                        <ArrowRight size={24} className="text-primary" />
+                    </Link>
+                </div>
             </div>
         </div>
     )

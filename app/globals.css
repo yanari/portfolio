@@ -5,6 +5,13 @@
   
 }
 
+@layer utilities {
+  .project-big {
+    clip-path: polygon(100% 0, 100% 50%, 65% 50%, 65% 100%, 0 100%, 0 0);
+
+  }
+}
+
 :root {
   --primary: #1e293b;
   --primary-foreground: #f8fafc;

@@ -10,7 +10,8 @@ interface Project {
     title: string
     description: string
     technologies: string[]
-    imageUrls: string[]
+    desktopImageUrls: string[]
+    mobileImageUrl: string
     link: string
     githubLink: string
 }
@@ -21,10 +22,10 @@ const projects: Project[] = [
         description:
             'A Pomodoro timer web app designed to improve focus with ambient soundscapes. Users can choose between pink noise, brown noise, and coffee shop sounds, each with tooltips explaining their cognitive benefits.',
         technologies: ['React', 'TypeScript', 'Tailwind', 'Context API'],
-        imageUrls: [
-            '/images/neuro_timer_1.png',
-            '/images/neuro_timer_2.png',
-            '/images/neuro_timer_3.png',
+        mobileImageUrl: '/images/neuro_timer_mobile.png',
+        desktopImageUrls: [
+            '/images/neuro_timer_desktop.png',
+            '/images/neuro_timer_desktop_2.png',
         ],
         githubLink: 'https://github.com/yanari/neurotimer',
         link: 'https://neurotimer.vercel.app',
@@ -34,10 +35,10 @@ const projects: Project[] = [
         description:
             "A fullstack app that calculates the dominant element (Fire, Earth, Air, or Water) in a user's birth chart. Users input birth data, and the app returns an analysis based on astrology logic.",
         technologies: ['Nuxt.js', 'Vue.js', 'Python', 'Chart.js'],
-        imageUrls: [
-            '/images/whats_your_elemental_sign_1.png',
-            '/images/whats_your_elemental_sign_2.png',
-            '/images/whats_your_elemental_sign_3.png',
+        mobileImageUrl: '/images/whats_your_elemental_sign_mobile.png',
+        desktopImageUrls: [
+            '/images/whats_your_elemental_sign_desktop.png',
+            '/images/whats_your_elemental_sign_desktop_2.png',
         ],
         githubLink: 'https://github.com/yanari/whats_your_elemental_sign',
         link: 'https://whatyourelementalsign.vercel.app',
@@ -60,14 +61,21 @@ export default function Projects() {
                             key={project.title}
                         >
                             <div className="rounded-full max-w-[460px] relative mb-3 md:mb-0">
+                                <div className="image-wrap">
+                                    <Image
+                                        className="rounded-xl project-big"
+                                        alt={project.title}
+                                        src={project.desktopImageUrls[0]}
+                                        height={368}
+                                        width={588}
+                                    />
+                                </div>
                                 <Image
-                                    className="rounded-xl"
                                     alt={project.title}
-                                    src={project.imageUrls[0]}
-                                    // height={331}
-                                    height={368}
-                                    width={588}
-                                    // width={529}
+                                    src={project.mobileImageUrl}
+                                    className="absolute bottom-0 right-0"
+                                    height={300}
+                                    width={80}
                                 />
                             </div>
                             <div className={isOdd ? '-order-1' : ''}>
@@ -88,12 +96,14 @@ export default function Projects() {
                                 </p>
                                 <div className="flex gap-6">
                                     <Link
+                                        className="transition-all hover:scale-105"
                                         rel="noopener noreferrer"
                                         href={project.githubLink}
                                     >
                                         <SiGithub size={40} />
                                     </Link>
                                     <Link
+                                        className="transition-all hover:scale-105"
                                         rel="noopener noreferrer"
                                         href={project.link}
                                     >

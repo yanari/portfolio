@@ -1,24 +1,15 @@
 import Tag from '@/components/ui/Tag'
-import Image from 'next/image'
+
 import Link from 'next/link'
 
 import { SiGithub } from '@icons-pack/react-simple-icons'
 import { ArrowRight, ExternalLink } from 'lucide-react'
 import UnderlineToBackground from '@/fancy/components/text/underline-to-background'
 import projectsList from '@/data/projects.json'
-import { cn } from '@/lib/utils'
+import { ProjectImages } from '@/components/projects/ProjectImages'
+import { IProject } from '@/shared/project.interface'
 
-interface Project {
-    title: string
-    description: string
-    technologies: string[]
-    desktopImageUrls: string[]
-    mobileImageUrl: string
-    link: string
-    githubLink: string
-}
-
-const projects: Project[] = projectsList
+const projects: IProject[] = projectsList
 
 export default function Projects() {
     return (
@@ -29,50 +20,21 @@ export default function Projects() {
             <div className="grid gap-10">
                 {projects.map((project, index) => {
                     const isOdd = (index + 1) % 2 !== 0
-                    const imageGap = isOdd
-                        ? 'last-section-goo'
-                        : 'first-section-goo'
-                    const mobilePlacement = isOdd
-                        ? 'bottom-0 right-0'
-                        : 'left-0 top-0'
+
                     return (
                         <div
                             className="grid md:grid-cols-[1fr_1fr] gap-10"
                             key={project.title}
                         >
-                            <div className="goo-effect max-w-[460px] mb-3 md:mb-0 relative">
-                                <div className="flex items-start w-full h-full col-start-1 row-start-1">
-                                    <Image
-                                        className={cn('goo-effect', imageGap)}
-                                        alt={project.title}
-                                        src={project.desktopImageUrls[0]}
-                                        height={368}
-                                        width={588}
-                                    />
-                                </div>
-                                <Image
-                                    alt={project.title}
-                                    src={project.mobileImageUrl}
-                                    className={cn(
-                                        'row-start-1 col-start-1 absolute',
-                                        mobilePlacement
-                                    )}
-                                    height={120}
-                                    width={120}
-                                />
-                            </div>
-                            <div className={isOdd ? '-order-1' : ''}>
+                            <ProjectImages project={project} isOdd={isOdd} />
+                            <div className={isOdd ? 'md:-order-1' : ''}>
                                 <h3 className="mb-4 text-3xl">
                                     {project.title}
                                 </h3>
                                 <div className="flex gap-2 flex-wrap">
-                                    {project.technologies.map((technology) => {
-                                        return (
-                                            <Tag key={technology}>
-                                                {technology}
-                                            </Tag>
-                                        )
-                                    })}
+                                    {project.technologies.map((tech) => (
+                                        <Tag key={tech}>{tech}</Tag>
+                                    ))}
                                 </div>
                                 <p className="text-base my-8">
                                     {project.description}

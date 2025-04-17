@@ -3,16 +3,27 @@ import Float from '@/fancy/components/blocks/float'
 import Link from 'next/link'
 import VerticalCutReveal from '@/fancy/components/text/vertical-cut-reveal'
 import { MoreHorizontal } from 'lucide-react'
+import Image from 'next/image'
+import GooeySvgFilter from '@/fancy/components/filter/gooey-svg-filter'
 
 export default function Skills() {
     return (
-        <div className="text-gray-50 px-8 py-16 flex flex-col">
+        <div className="text-gray-50 px-4 md:px-8 py-16 flex flex-col">
+            <GooeySvgFilter id="gooey-filter" />
             <h2 className="mb-8 text-3xl font-[var(--font-vt323)] text-primary">
                 Stack
             </h2>
-            <div className="grid md:grid-cols-2 gap-12 text-slate-800">
-                <div className="md:col-start-2 md:row-span-4 bg-white">
-                    {/* Foto Minha */}
+            <div className="grid md:grid-cols-[1fr_300px] gap-12 text-slate-800">
+                <div className="min-h-72 md:col-start-2 md:row-start-1 md:row-span-3 overflow-hidden brightness-75">
+                    <Image
+                        priority
+                        className="object-center object-cover"
+                        style={{ filter: 'url(#gooey-filter)' }}
+                        alt="Marcelle"
+                        src="/images/watashi.jpeg"
+                        fill
+                        sizes="(max-width: 768px) 100vw"
+                    />
                 </div>
                 <div className="bg-primary p-8 rounded-4xl">
                     <h4 className="text-2xl mb-4">Frontend</h4>
@@ -60,9 +71,10 @@ export default function Skills() {
                 </div>
                 <div className="flex items-center justify-between">
                     <p className="flex-1/2 text-white/80 text-sm">
-                        Some of my{' '}
+                        Some of my
+                        <br />
                         <span className="font-semibold italic">
-                            favorite technologies
+                            favorite tech
                         </span>
                         ...
                     </p>

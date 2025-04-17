@@ -3,4 +3,5 @@ export interface IExperience {
     summary: string
     date: string
     skills: Array<string>
+    role: string
 }

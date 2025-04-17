@@ -14,7 +14,7 @@ export default function Contact() {
         return <p>Thanks for joining!</p>
     }
     return (
-        <div className="text-gray-50 px-8 py-16 flex flex-col">
+        <div className="text-gray-50 px-4 md:px-8 py-16 flex flex-col">
             <h2 className="mb-8 text-3xl font-[var(--font-vt323)] text-primary">
                 Let's Talk!
             </h2>

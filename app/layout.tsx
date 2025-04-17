@@ -4,6 +4,7 @@ import { ThemeToggles } from '@/components/layout/ThemeToggles'
 import SideMenu from '@/components/layout/SideMenu'
 
 import { Fira_Mono, VT323 } from 'next/font/google'
+import { SvgFilters } from '@/components/layout/SvgFilters'
 
 const firaMono = Fira_Mono({
     weight: ['400', '500'],
@@ -37,6 +38,7 @@ export default function RootLayout({
                         <ThemeToggles />
                     </header>
                     <div className="flex-1 ml-16 md:ml-64">{children}</div>
+                    <SvgFilters />
                 </ThemeProvider>
             </body>
         </html>

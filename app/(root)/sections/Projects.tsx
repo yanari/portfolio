@@ -5,6 +5,7 @@ import Link from 'next/link'
 import { SiGithub } from '@icons-pack/react-simple-icons'
 import { ArrowRight, ExternalLink } from 'lucide-react'
 import UnderlineToBackground from '@/fancy/components/text/underline-to-background'
+import projectsList from '@/data/projects.json'
 
 interface Project {
     title: string
@@ -16,35 +17,7 @@ interface Project {
     githubLink: string
 }
 
-const projects: Project[] = [
-    {
-        title: 'Neurotimer',
-        description:
-            'A Pomodoro timer web app designed to improve focus with ambient soundscapes. Users can choose between pink noise, brown noise, and coffee shop sounds, each with tooltips explaining their cognitive benefits.',
-        technologies: ['React', 'TypeScript', 'Tailwind', 'Context API'],
-        mobileImageUrl: '/images/neuro_timer_mobile.png',
-        desktopImageUrls: [
-            '/images/neuro_timer_desktop.png',
-            '/images/neuro_timer_desktop_2.png',
-        ],
-        githubLink: 'https://github.com/yanari/neurotimer',
-        link: 'https://neurotimer.vercel.app',
-    },
-    {
-        title: "What's Your Elemental Sign?",
-        description:
-            "A fullstack app that calculates the dominant element (Fire, Earth, Air, or Water) in a user's birth chart. Users input birth data, and the app returns an analysis based on astrology logic.",
-        technologies: ['Nuxt.js', 'Vue.js', 'Python', 'Chart.js'],
-        mobileImageUrl: '/images/whats_your_elemental_sign_mobile.png',
-        desktopImageUrls: [
-            '/images/whats_your_elemental_sign_desktop.png',
-            '/images/whats_your_elemental_sign_desktop_2.png',
-        ],
-        githubLink: 'https://github.com/yanari/whats_your_elemental_sign',
-        link: 'https://whatyourelementalsign.vercel.app',
-    },
-    // Add more projects as needed
-]
+const projects: Project[] = projectsList
 
 export default function Projects() {
     return (

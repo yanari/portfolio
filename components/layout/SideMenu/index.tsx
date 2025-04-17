@@ -1,8 +1,9 @@
 'use client'
 
 import React, { useState, useEffect } from 'react'
-import { cn } from '@/lib/utils'
-import { Home, User, Briefcase, Library, Mail } from 'lucide-react'
+import { User, Briefcase, Library, Mail, HomeIcon } from 'lucide-react'
+import { usePathname, useRouter } from 'next/navigation'
+import { SideMenuItem } from './SideMenuItem'
 
 type MenuItem = {
     id: string
@@ -19,6 +20,9 @@ const menuItems: MenuItem[] = [
 ]
 
 export function SideMenu() {
+    const pathname = usePathname()
+    const router = useRouter()
+    const isRootPage = pathname === '/'
     const [activeSection, setActiveSection] = useState('home')
 
     useEffect(() => {
@@ -61,30 +65,29 @@ export function SideMenu() {
     return (
         <div className="fixed left-0 top-0 h-full w-16 md:w-64 bg-transparent border-r-4 border-border shadow-md flex flex-col py-8 z-10 font-mono">
             <nav className="mt-6 flex-1">
-                <ul className="space-y-2">
-                    {menuItems.map((item) => (
-                        <li key={item.id}>
-                            <button
-                                onClick={() => scrollToSection(item.id)}
-                                className={cn(
-                                    'uppercase flex items-center w-full py-3 px-4 text-sidebar-foreground hover:text-primary hover:bg-sidebar-accent rounded-none transition-all',
-                                    activeSection === item.id &&
-                                        'color-primary translate-x-1 border-l-4 border-primary active '
-                                )}
-                            >
-                                <span className="flex-shrink-0">
-                                    {item.icon}
-                                </span>
-                                <span className="ml-3 hidden md:block">
-                                    {item.label}
-                                </span>
-                                {activeSection === item.id && (
-                                    <div className="h-full w-1 bg-primary absolute right-0" />
-                                )}
-                            </button>
-                        </li>
-                    ))}
-                </ul>
+                {isRootPage ? (
+                    <ul className="space-y-2">
+                        {menuItems.map((item) => (
+                            <li key={item.id}>
+                                <SideMenuItem
+                                    activeSection={activeSection}
+                                    handleClick={() => scrollToSection(item.id)}
+                                    itemIcon={item.icon}
+                                    itemId={item.id}
+                                    itemLabel={item.label}
+                                />
+                            </li>
+                        ))}
+                    </ul>
+                ) : (
+                    <div className="flex justify-center">
+                        <SideMenuItem
+                            handleClick={() => router.push('/')}
+                            itemIcon={<HomeIcon />}
+                            itemLabel="Home"
+                        />
+                    </div>
+                )}
             </nav>
         </div>
     )

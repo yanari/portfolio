@@ -1,20 +1,21 @@
+import { Loading } from '@/components/layout/Loading'
 import dynamic from 'next/dynamic'
 
 const Sections = {
     about: dynamic(() => import('./About'), {
-        loading: () => <p>Loading...</p>,
+        loading: () => <Loading />,
     }),
     projects: dynamic(() => import('./Projects'), {
-        loading: () => <p>Loading...</p>,
+        loading: () => <Loading />,
     }),
     skills: dynamic(() => import('./Skills'), {
-        loading: () => <p>Loading...</p>,
+        loading: () => <Loading />,
     }),
     experience: dynamic(() => import('./Experience'), {
-        loading: () => <p>Loading...</p>,
+        loading: () => <Loading />,
     }),
     contact: dynamic(() => import('./Contact'), {
-        loading: () => <p>Loading...</p>,
+        loading: () => <Loading />,
     }),
 }
 

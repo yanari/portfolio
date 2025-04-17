@@ -17,12 +17,12 @@ export default function Contact() {
             <div className="grid md:grid-cols-[2fr_1fr] gap-8 text-gray-50">
                 <ContactForm />
 
-                <div className="md:block flex flex-col items-center">
+                <div className="flex flex-col items-center">
                     <h4 className="text-primary">
                         <ScrambleIn text="Or find me on:" />
                     </h4>
                     <div className="flex gap-8 mt-8">
-                        <Float>
+                        <Float amplitude={[30, 20, 15]}>
                             <Link href="https://www.github.com/yanari">
                                 <SiGithub size={48} />
                             </Link>

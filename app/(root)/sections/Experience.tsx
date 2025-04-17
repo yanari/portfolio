@@ -23,7 +23,7 @@ export default function Experience() {
                             {/* <p className="text-gray-300 text-xs md:text-sm hidden md:block">
                                 {experience.summary}
                             </p> */}
-                            <div className="text-gray-300 text-xs md:text-sm hidden md:block">
+                            <div className="text-gray-300 text-xs md:text-sm">
                                 <span className="font-semibold text-sm mr-2">
                                     Role:
                                 </span>

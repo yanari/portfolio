@@ -1,7 +1,7 @@
 import Image from 'next/image'
 import { cn } from '@/lib/utils'
 import GooeySvgFilter from '@/fancy/components/filter/gooey-svg-filter'
-import { IProject } from '@/shared/project.interface'
+import { IProject } from '@/shared/interfaces/project.interface'
 
 interface ProjectImagesProps {
     project: IProject

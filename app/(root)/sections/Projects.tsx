@@ -7,7 +7,7 @@ import { ArrowRight, ExternalLink } from 'lucide-react'
 import UnderlineToBackground from '@/fancy/components/text/underline-to-background'
 import projectsList from '@/data/projects.json'
 import { ProjectImages } from '@/components/projects/ProjectImages'
-import { IProject } from '@/shared/project.interface'
+import { IProject } from '@/shared/interfaces/project.interface'
 
 const projects: IProject[] = projectsList
 

@@ -1,5 +1,5 @@
 import Sections from './sections'
-import { ISections } from '@/shared/section.interface'
+import { ISections } from '@/shared/interfaces/section.interface'
 
 const sectionData = ['about', 'projects', 'skills', 'experience', 'contact']
 

@@ -11,20 +11,14 @@ import {
     DropdownMenuItem,
     DropdownMenuTrigger,
 } from '@/components/ui/dropdown-menu'
-
-type ThemeName = 'dracula' | 'atom-one-dark' | 'nord'
+import { PortfolioThemes } from '@/themes/themes'
+import { cn } from '@/lib/utils'
 
 export function ThemeToggles() {
     const { theme, setTheme } = useTheme()
     const [mounted, setMounted] = React.useState(false)
 
     React.useEffect(() => setMounted(true), [])
-
-    const themeMapping: Record<ThemeName, string> = {
-        'atom-one-dark': 'Atom One Dark',
-        dracula: 'Dracula',
-        nord: 'Nord',
-    }
 
     return (
         <DropdownMenu>
@@ -35,19 +29,19 @@ export function ThemeToggles() {
                 </Button>
             </DropdownMenuTrigger>
             <DropdownMenuContent className="bg-background" align="end">
-                {Object.entries(themeMapping).map(([key, value]) => {
+                {Object.entries(PortfolioThemes).map(([key, value]) => {
                     const isSelected = mounted && theme === key
-                    // The theme is only available after the component is mounted.
-                    const textColor = isSelected
-                        ? 'text-primary'
-                        : ' text-white'
+                    const textColor = isSelected ? 'text-primary' : 'text-white'
                     return (
                         <DropdownMenuItem
-                            className={`px-4 py-2 font-semibold rounded-md transition-colors duration-200 ${textColor}`}
+                            className={cn(
+                                'px-4 py-2 font-semibold rounded-md transition-colors duration-200',
+                                textColor
+                            )}
                             onClick={() => setTheme(key)}
                             key={key}
                         >
-                            {value}
+                            {value.label}
                         </DropdownMenuItem>
                     )
                 })}

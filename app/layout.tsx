@@ -4,6 +4,7 @@ import { ThemeToggles } from '@/components/layout/ThemeToggles'
 import SideMenu from '@/components/layout/SideMenu'
 
 import { Fira_Mono, VT323 } from 'next/font/google'
+import { PortfolioThemesNames } from '@/themes/themes'
 
 const firaMono = Fira_Mono({
     weight: ['400', '500', '700'],
@@ -30,7 +31,7 @@ export default function RootLayout({
                 <ThemeProvider
                     defaultTheme="atom-one-dark"
                     enableColorScheme
-                    themes={['atom-one-dark', 'nord', 'dracula']}
+                    themes={PortfolioThemesNames}
                 >
                     <SideMenu />
                     <header className="fixed right-6 top-6 z-10">

@@ -1,6 +1,39 @@
 @import 'tailwindcss';
 @import 'tw-animate-css';
 
+/* Themes */
+
+:root {
+    --primary: #1e293b;
+    --primary-foreground: #f8fafc;
+}
+html[data-theme='atom-one-dark'] {
+    --background: #282c34;
+
+    --primary: #98c379;
+    --secondary: #c678dd;
+    --primary-foreground: #282a36;
+}
+
+html[data-theme='dracula'] {
+    --background: #282a36;
+
+    --primary: #8be9fd;
+    --secondary: #f1fa8c;
+    --primary-foreground: #282a36;
+}
+html[data-theme='synthwave84'] {
+    --background: #282a36;
+
+    --primary: #f92aad;
+    --secondary: #72f1b8;
+    --primary-foreground: #282a36;
+    /* TODO: implement text-shadow */
+    --shadow-primary: rgb(16, 12, 15) 0px 0px 2px,
+        rgba(220, 7, 142, 0.2) 0px 0px 5px,
+        rgba(255, 255, 255, 0.2) 0px 0px 10px;
+}
+
 @layer base {
 }
 
@@ -34,33 +67,6 @@
             32% 50%
         );
     }
-}
-
-:root {
-    --primary: #1e293b;
-    --primary-foreground: #f8fafc;
-}
-html[data-theme='atom-one-dark'] {
-    --background: #282c34;
-
-    --primary: #98c379;
-    --secondary: #c678dd;
-    --primary-foreground: #282a36;
-}
-
-html[data-theme='dracula'] {
-    --background: #282a36;
-
-    --primary: #8be9fd;
-    --secondary: #f1fa8c;
-    --primary-foreground: #282a36;
-}
-html[data-theme='nord'] {
-    --background: #2e3440;
-
-    --primary: #8fbcbb;
-    --secondary: #81a1c1;
-    --primary-foreground: #2e3440;
 }
 
 @custom-variant dark (&:is(.dark *));

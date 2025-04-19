@@ -1,15 +1,6 @@
-'use client'
+import { CodeBlock } from '@/components/about/CodeBlock'
 
-import {
-    atomOneDark,
-    dracula,
-    nord,
-} from 'react-syntax-highlighter/dist/esm/styles/hljs'
-import SyntaxHighlighter from 'react-syntax-highlighter'
-import { useTheme } from 'next-themes'
-import { useTypewriter } from 'react-simple-typewriter'
-
-const desktopText = `const about = {
+const code = `const about = {
     name: 'Marcelle Yanari',
     role: 'Software Developer',
     skills: [
@@ -19,44 +10,12 @@ const desktopText = `const about = {
     ]
 }`
 
-const themes: { [key: string]: { [key: string]: React.CSSProperties } } = {
-    dracula: dracula,
-    'atom-one-dark': atomOneDark,
-    nord: nord,
-}
-
 export default function About() {
-    const { theme } = useTheme()
-
-    const [text] = useTypewriter({
-        words: [desktopText],
-    })
-
-    if (!theme) return null
-
     return (
         <div className="text-lg md:text-xl lg:text-4xl h-dvh text-gray-50 flex flex-col items-center justify-center">
-            <pre className="justify-self-center h-70 md:h-90 md:w-3xl">
-                <div className="relative">
-                    <pre>
-                        <div className="sm:text-4xl">
-                            <SyntaxHighlighter
-                                customStyle={{
-                                    display: 'flex',
-                                    alignItems: 'start',
-                                    justifyContent: 'start',
-                                    padding: 0,
-                                    overflowX: 'clip',
-                                }}
-                                language="typescript"
-                                style={themes[theme]}
-                            >
-                                {text}
-                            </SyntaxHighlighter>
-                        </div>
-                    </pre>
-                </div>
-            </pre>
+            <div className="justify-self-center h-70 md:h-90 md:w-3xl">
+                <CodeBlock code={code} />
+            </div>
         </div>
     )
 }

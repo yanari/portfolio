@@ -5,24 +5,13 @@ import {
     dracula,
     nord,
 } from 'react-syntax-highlighter/dist/esm/styles/hljs'
-import { useWindowSize } from '@uidotdev/usehooks'
 import SyntaxHighlighter from 'react-syntax-highlighter'
 import { useTheme } from 'next-themes'
-import { Cursor, useTypewriter } from 'react-simple-typewriter'
+import { useTypewriter } from 'react-simple-typewriter'
 
 const desktopText = `const about = {
     name: 'Marcelle Yanari',
     role: 'Software Developer',
-    skills: [
-        'React',
-        'Flutter',
-        'Typescript'
-    ]
-}`
-
-const mobileText = `const about = {
-    name: 'Marcelle',
-    role: 'Developer',
     skills: [
         'React',
         'Flutter',
@@ -38,15 +27,10 @@ const themes: { [key: string]: { [key: string]: React.CSSProperties } } = {
 
 export default function About() {
     const { theme } = useTheme()
-    const { width } = useWindowSize()
+
     const [text] = useTypewriter({
         words: [desktopText],
-        loop: 0,
     })
-
-    if (!width) return null
-
-    const isDesktop = width > 1024
 
     if (!theme) return null
 
@@ -64,12 +48,11 @@ export default function About() {
                                     padding: 0,
                                     overflowX: 'clip',
                                 }}
-                                language="javascript"
+                                language="typescript"
                                 style={themes[theme]}
                             >
                                 {text}
                             </SyntaxHighlighter>
-                            {/* <Cursor /> */}
                         </div>
                     </pre>
                 </div>

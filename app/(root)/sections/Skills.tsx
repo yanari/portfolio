@@ -2,9 +2,8 @@ import { SiGithub } from '@icons-pack/react-simple-icons'
 import Float from '@/fancy/components/blocks/float'
 import Link from 'next/link'
 import VerticalCutReveal from '@/fancy/components/text/vertical-cut-reveal'
-import { MoreHorizontal } from 'lucide-react'
-import Image from 'next/image'
 import GooeySvgFilter from '@/fancy/components/filter/gooey-svg-filter'
+import { MyPhoto } from '@/components/skills/MyPhoto'
 
 export default function Skills() {
     return (
@@ -15,15 +14,7 @@ export default function Skills() {
             </h2>
             <div className="grid md:grid-cols-[1fr_300px] gap-12 text-slate-800">
                 <div className="min-h-72 md:col-start-2 md:row-start-1 md:row-span-3 overflow-hidden brightness-75">
-                    <Image
-                        priority
-                        className="object-center object-cover"
-                        style={{ filter: 'url(#gooey-filter)' }}
-                        alt="Marcelle"
-                        src="/images/watashi.jpeg"
-                        fill
-                        sizes="(max-width: 768px) 100vw"
-                    />
+                    <MyPhoto />
                 </div>
                 <div className="bg-primary p-8 rounded-4xl">
                     <h4 className="text-2xl mb-4">Frontend</h4>
@@ -69,7 +60,7 @@ export default function Skills() {
                         </Link>
                     </Float>
                 </div>
-                <div className="flex items-center justify-between">
+                <div className="flex gap-2 items-center justify-between">
                     <p className="flex-1/2 text-white/80 text-sm">
                         Some of my
                         <br />

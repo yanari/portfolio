@@ -47,7 +47,7 @@ export function ProjectImages({ project, isOdd }: ProjectImagesProps) {
                     alt={project.title}
                     src={project.mobileImageUrl}
                     className={cn(
-                        'w-18 h-18 md:w-32 md:h-32 row-start-1 col-start-1 absolute md:max-w-fit',
+                        'row-start-1 col-start-1 absolute max-w-16 md:max-w-fit',
                         mobilePlacement
                     )}
                     height={120}

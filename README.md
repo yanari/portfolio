@@ -1,36 +1,74 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+<h1 align="center">🐈 Marcelle Yanari's Portfolio</h1>
+<p align="center">
+  A little place on the web to show what I’ve been building.
+</p>
 
-## Getting Started
+<p align="center">
+  <a href="https://portfolio-yanari.vercel.app"><strong>🌐 Visit Live Site</strong></a>
+</p>
 
-First, run the development server:
+<p align="center">
+  <img src="preview.gif" alt="Demo of the portfolio" width="100%" />
+</p>
+
+
+## ✨ About Me
+
+Hey! I'm Marcelle Yanari — a passionate frontend & mobile developer who loves clean code, pastel VSCode themes, and cats.  
+I’ve been working with tech since 2019 and I’m always finding creative ways to make apps that are fast, fun, and user-friendly.
+
+This portfolio is where I keep my digital playground — it showcases my latest work, my experience, and gives people an easy way to connect with me.
+
+
+## 📦 What's Inside?
+
+### 🔍 Sections
+- 💼 Projects
+- 🧠 Skills
+- 🚀 Experience
+- 📬 Contact Me
+
+### 🔧 Built With
+- [Next.js](https://nextjs.org/)
+- [Tailwind CSS](https://tailwindcss.com/)
+- [Framer Motion](https://www.framer.com/motion/)
+- [Radix UI](https://www.radix-ui.com/) for accessible UI components
+- [Next Themes](https://github.com/pacocoursey/next-themes) for theme switching
+- [Vercel](https://vercel.com/) for deployment
+
+### 🔮 Features
+- 🎨 Dynamic **theme switcher** based on VSCode themes (Dracula, Synthwave, Atom One Dark)
+- 📱 **Responsive design** for mobile and desktop
+- 🎬 Smooth **animations** across pages
+- 🌈 Entire site adapts to the selected theme — not just colors
+
+---
+
+## 🧪 How to Run Locally
 
 ```bash
+# Clone the repo
+git clone https://github.com/yanari/portfolio.git
+
+# Move into the folder
+cd portfolio
+
+# Install dependencies
+npm install
+
+# Run the dev server
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+````
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Now open http://localhost:3000 in your browser 🚀
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## 🗺️ Roadmap / Coming Soon
+- 🗂️ Route for browsing all projects
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+- ♿ Accessibility improvements to the theme picker (Headless UI or Radix)
 
-## Learn More
+- 🎈 “Contact Me” section with more personality and interactivity
 
-To learn more about Next.js, take a look at the following resources:
+## 💌 Want to Chat?
+If you have feedback, suggestions, or just want to say hi, feel free to [open an issue](https://github.com/yanari/portfolio/issues) or reach out!
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.

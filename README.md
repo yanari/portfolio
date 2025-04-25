@@ -1,7 +1,8 @@
 <h1 align="center">🐈 Marcelle Yanari's Portfolio</h1>
-<p align="center">
-  A little place on the web to show what I’ve been building.
-</p>
+<p align="center">Hey! I'm Marcelle Yanari — a passionate frontend & mobile developer who loves clean code, pastel VSCode themes, and cats.</p>
+<p align="center">I’ve been working with tech since 2019 and I’m always finding creative ways to make apps that are fast, fun, and user-friendly.</p>
+
+<p align="center">This portfolio is where I keep my digital playground — it showcases my latest work, my experience, and gives people an easy way to connect with me.</p>
 
 <p align="center">
   <a href="https://portfolio-yanari.vercel.app"><strong>🌐 Visit Live Site</strong></a>
@@ -10,15 +11,6 @@
 <p align="center">
   <img src="preview.gif" alt="Demo of the portfolio" width="100%" />
 </p>
-
-
-## ✨ About Me
-
-Hey! I'm Marcelle Yanari — a passionate frontend & mobile developer who loves clean code, pastel VSCode themes, and cats.  
-I’ve been working with tech since 2019 and I’m always finding creative ways to make apps that are fast, fun, and user-friendly.
-
-This portfolio is where I keep my digital playground — it showcases my latest work, my experience, and gives people an easy way to connect with me.
-
 
 ## 📦 What's Inside?
 

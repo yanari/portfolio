@@ -15,8 +15,6 @@ export function ContactForm() {
 
     return (
         <form
-            action="https://formsubmit.co/yanarimy@gmail.com"
-            method="POST"
             className="grid text-lg text-slate-800 gap-4"
             onSubmit={handleSubmit}
         >

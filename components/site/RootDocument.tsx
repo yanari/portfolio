@@ -1,5 +1,5 @@
 import type { Metadata, Viewport } from 'next'
-import { Cascadia_Code, Fira_Mono } from 'next/font/google'
+import { Cascadia_Code, Fira_Mono, Space_Mono } from 'next/font/google'
 import { ThemeProvider } from 'next-themes'
 import { defaultTheme, themeCss, themeIds, themes } from '@/themes'
 import { localeMeta, locales, type Locale } from '@/content/i18n'
@@ -9,6 +9,15 @@ const firaMono = Fira_Mono({
     weight: ['400', '500', '700'],
     subsets: ['latin'],
     variable: '--font-fira-mono',
+    display: 'swap',
+})
+
+// Hero name only
+const spaceMono = Space_Mono({
+    weight: '700',
+    style: 'italic',
+    subsets: ['latin', 'latin-ext'],
+    variable: '--font-space-mono',
     display: 'swap',
 })
 
@@ -74,7 +83,7 @@ export const viewport: Viewport = {
 
 export function RootDocument({ locale, children }: { locale: Locale; children: React.ReactNode }) {
     return (
-        <html lang={localeMeta[locale].htmlLang} suppressHydrationWarning className={`${firaMono.variable} ${cascadia.variable}`}>
+        <html lang={localeMeta[locale].htmlLang} suppressHydrationWarning className={`${firaMono.variable} ${cascadia.variable} ${spaceMono.variable}`}>
             <body>
                 <style dangerouslySetInnerHTML={{ __html: themeCss }} />
                 <ThemeProvider

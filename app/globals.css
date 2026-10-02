@@ -36,6 +36,7 @@
 
     --font-mono: var(--font-fira-mono), ui-monospace, SFMono-Regular, Menlo, monospace;
     --font-display: var(--font-cascadia), var(--font-fira-mono), monospace;
+    --font-name: var(--font-space-mono), var(--font-fira-mono), monospace;
     /* Like VS Code's markdown preview: prose in the system UI font */
     --font-prose: system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', sans-serif;
 }

@@ -19,7 +19,7 @@ export function SectionHeader({
                 {!kind.startsWith('folder') && <FileIcon kind={kind} />}
                 {file}
             </p>
-            <h2 id={`${id}-title`} className="glow font-display text-3xl font-semibold leading-tight tracking-tight text-primary sm:text-4xl">
+            <h2 id={`${id}-title`} className="glow font-display text-3xl font-semibold italic leading-tight tracking-tight text-primary sm:text-4xl">
                 {title}
             </h2>
         </header>

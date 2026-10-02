@@ -13,7 +13,7 @@ export function Profile({ locale }: { locale: Locale }) {
             content: (
                 <div className="flex items-baseline gap-[1ch]">
                     <Comment className="shrink-0 whitespace-pre">{'\u00a0*'}</Comment>
-                    <h1 className="glow font-display text-4xl font-bold not-italic leading-tight tracking-tight text-fg sm:text-5xl lg:text-6xl">
+                    <h1 className="glow font-display text-4xl font-bold italic leading-tight tracking-tight text-fg sm:text-5xl lg:text-6xl">
                         {profile.name}
                     </h1>
                 </div>

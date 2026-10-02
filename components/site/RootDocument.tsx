@@ -1,5 +1,5 @@
 import type { Metadata, Viewport } from 'next'
-import { Fira_Mono, IBM_Plex_Mono } from 'next/font/google'
+import { Cascadia_Code, Fira_Mono } from 'next/font/google'
 import { ThemeProvider } from 'next-themes'
 import { defaultTheme, themeCss, themeIds, themes } from '@/themes'
 import { localeMeta, locales, type Locale } from '@/content/i18n'
@@ -12,10 +12,12 @@ const firaMono = Fira_Mono({
     display: 'swap',
 })
 
-const plexMono = IBM_Plex_Mono({
+// Headings: Cascadia Code's cursive italic, as in editor themes
+const cascadia = Cascadia_Code({
     weight: ['600', '700'],
+    style: 'italic',
     subsets: ['latin', 'latin-ext'],
-    variable: '--font-plex-mono',
+    variable: '--font-cascadia',
     display: 'swap',
 })
 
@@ -72,7 +74,7 @@ export const viewport: Viewport = {
 
 export function RootDocument({ locale, children }: { locale: Locale; children: React.ReactNode }) {
     return (
-        <html lang={localeMeta[locale].htmlLang} suppressHydrationWarning className={`${firaMono.variable} ${plexMono.variable}`}>
+        <html lang={localeMeta[locale].htmlLang} suppressHydrationWarning className={`${firaMono.variable} ${cascadia.variable}`}>
             <body>
                 <style dangerouslySetInnerHTML={{ __html: themeCss }} />
                 <ThemeProvider

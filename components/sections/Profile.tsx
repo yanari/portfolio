@@ -31,9 +31,9 @@ export function Profile({ locale }: { locale: Locale }) {
         { content: <Comment>{'\u00a0*'}</Comment> },
         {
             content: (
-                <div className="flex items-start gap-[1ch] leading-7">
+                <div className="flex items-start gap-[1ch]">
                     <Comment className="shrink-0 whitespace-pre">{'\u00a0*'}</Comment>
-                    <p className="max-w-[60ch] font-prose text-base text-fg sm:text-lg">{profile.tagline[locale]}</p>
+                    <p className="max-w-[60ch] text-fg">{profile.tagline[locale]}</p>
                 </div>
             ),
         },

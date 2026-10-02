@@ -35,7 +35,7 @@
     --color-syn-operator: var(--syntax-operator);
 
     --font-mono: var(--font-fira-mono), ui-monospace, SFMono-Regular, Menlo, monospace;
-    --font-display: var(--font-vt323), var(--font-fira-mono), monospace;
+    --font-display: var(--font-press-start), var(--font-fira-mono), monospace;
     /* Like VS Code's markdown preview: prose in the system UI font */
     --font-prose: system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', sans-serif;
 }

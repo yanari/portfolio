@@ -22,7 +22,7 @@ function ProjectPanel({ project, locale }: { project: Project; locale: Locale })
     return (
         <article>
             <p className="mb-3 text-xs text-muted">{project.kind[locale]}</p>
-            <h3 className="font-display text-4xl leading-none text-fg">{project.name}</h3>
+            <h3 className="font-display text-lg leading-snug text-fg sm:text-xl">{project.name}</h3>
             {(meta || project.status) && (
                 <p className="mt-2 flex flex-wrap items-center gap-x-3 gap-y-1 text-sm text-muted">
                     {meta && <span>{meta}</span>}

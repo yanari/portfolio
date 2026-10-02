@@ -1,5 +1,5 @@
 import type { Metadata, Viewport } from 'next'
-import { Fira_Mono, VT323 } from 'next/font/google'
+import { Fira_Mono, Press_Start_2P } from 'next/font/google'
 import { ThemeProvider } from 'next-themes'
 import { defaultTheme, themeCss, themeIds, themes } from '@/themes'
 import { localeMeta, locales, type Locale } from '@/content/i18n'
@@ -12,10 +12,10 @@ const firaMono = Fira_Mono({
     display: 'swap',
 })
 
-const vt323 = VT323({
+const pressStart = Press_Start_2P({
     weight: '400',
-    subsets: ['latin'],
-    variable: '--font-vt323',
+    subsets: ['latin', 'latin-ext'],
+    variable: '--font-press-start',
     display: 'swap',
 })
 
@@ -72,7 +72,7 @@ export const viewport: Viewport = {
 
 export function RootDocument({ locale, children }: { locale: Locale; children: React.ReactNode }) {
     return (
-        <html lang={localeMeta[locale].htmlLang} suppressHydrationWarning className={`${firaMono.variable} ${vt323.variable}`}>
+        <html lang={localeMeta[locale].htmlLang} suppressHydrationWarning className={`${firaMono.variable} ${pressStart.variable}`}>
             <body>
                 <style dangerouslySetInnerHTML={{ __html: themeCss }} />
                 <ThemeProvider

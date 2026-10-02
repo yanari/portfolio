@@ -9,7 +9,7 @@ export default function NotFound() {
                 <p className="text-sm text-muted">
                     <span className="text-syn-property">Error:</span> ENOENT: no such file or directory
                 </p>
-                <h1 className="glow font-display text-4xl text-primary">404</h1>
+                <h1 className="glow font-display text-5xl font-bold text-primary">404</h1>
                 <p className="font-prose text-lg text-fg">This page doesn&apos;t exist.</p>
                 <Link href="/" className="text-primary underline underline-offset-4">
                     ← open profile.ts

@@ -27,15 +27,18 @@ export const experience: Experience[] = [
     },
     {
         company: 'Lopti',
-        role: { en: 'Senior Frontend Developer', pt: 'Senior Frontend Developer' },
+        role: {
+            en: 'Senior Frontend Developer',
+            pt: 'Senior Frontend Developer',
+        },
         start: '2025-05',
         end: '2025-09',
         location: { en: 'San Francisco, CA', pt: 'San Francisco, EUA' },
         summary: {
-            en: 'Led frontend development: owned the architecture and key features, and worked with the AI team to turn AI capabilities into usable product experiences.',
-            pt: 'Liderei o desenvolvimento frontend: responsável pela arquitetura e features principais, trabalhando com o time de IA para transformar capacidades de IA em experiências de produto usáveis.',
+            en: 'Core frontend of a legal AI platform: React and Redux interfaces, a real-time AI chat over WebSockets, and close work with the AI team on how documents and AI responses come together.',
+            pt: 'Frontend core de uma plataforma de IA jurídica: interfaces com React e Redux, chat com IA em tempo real via WebSockets e trabalho próximo ao time de IA na integração entre documentos e respostas da IA.',
         },
-        stack: ['React', 'TypeScript', 'UI/UX', 'AI features'],
+        stack: ['React', 'TypeScript', 'UI/UX', 'WebSockets', 'Redux'],
     },
     {
         company: 'Accenture',
@@ -89,7 +92,11 @@ export const experience: Experience[] = [
     },
 ]
 
-export const education: { school: string; course: Localized; period?: string }[] = [
+export const education: {
+    school: string
+    course: Localized
+    period?: string
+}[] = [
     {
         school: 'Centro Universitário FAM',
         course: {

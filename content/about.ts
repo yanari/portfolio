@@ -1,38 +1,37 @@
 import type { Localized } from './i18n'
 
-/*
- * TODO(marcelle): this draft only uses facts from the resume and the old
- * README. Rewrite in your own voice — especially `intro` and `offTheClock`.
- */
 export const about = {
     intro: {
         en: [
-            'I started in 2019 building a company website from scratch with React, and I have been building products ever since: a health services platform, a streaming app shipped to iOS, Android and set-top boxes, mobile apps for one of the largest pharmacy groups in Brazil, a financing platform for a Mexican bank and, most recently, the frontend of an AI product.',
-            'Most of my work sits between design and engineering — making interfaces feel simple while keeping the architecture underneath them maintainable. Today I am a full-stack engineer back at Análise Editorial, where I started, going deeper into backend and data, and studying Artificial Intelligence at FAM.',
+            "I started coding professionally in 2019, building a company website from scratch with React. Since then, I've worked on everything from health and streaming products to mobile apps for one of Brazil's largest pharmacy groups, a vehicle financing platform for a Mexican bank, data platforms at scale, and most recently, the frontend of an AI product.",
+            "I tend to gravitate toward the space between design and engineering: turning complex things into interfaces that feel simple, while keeping the codebase healthy enough to evolve. These days, I'm working across the stack at Análise Editorial, where I started my career, while going deeper into backend, data and AI.",
         ],
         pt: [
-            'Comecei em 2019 construindo do zero o site de uma empresa com React, e desde então construo produtos: uma plataforma de serviços de saúde, um app de streaming publicado para iOS, Android e set-top boxes, apps mobile para um dos maiores grupos de farmácias do Brasil, uma plataforma de financiamento para um banco mexicano e, mais recentemente, o frontend de um produto com IA.',
-            'A maior parte do meu trabalho fica entre design e engenharia — fazer interfaces parecerem simples mantendo sustentável a arquitetura por baixo delas. Hoje sou full-stack engineer de volta à Análise Editorial, onde comecei, me aprofundando em backend e dados, e estudo Inteligência Artificial na FAM.',
+            'Comecei a trabalhar profissionalmente com desenvolvimento em 2019, construindo do zero o site de uma empresa com React. Desde então, trabalhei em produtos que vão de saúde e streaming a apps mobile para um dos maiores grupos de farmácias do Brasil, uma plataforma de financiamento de veículos para um banco mexicano, plataformas de dados em escala e, mais recentemente, o frontend de um produto com IA.',
+            'Gosto especialmente de trabalhar no espaço entre design e engenharia: transformar coisas complexas em interfaces que parecem simples, sem deixar de lado uma arquitetura saudável o suficiente para evoluir. Hoje trabalho de forma full-stack na Análise Editorial, onde comecei minha carreira, enquanto me aprofundo em backend, dados e IA.',
         ],
     } satisfies Localized<string[]>,
-    howIWorkTitle: { en: 'How I work', pt: 'Como eu trabalho' } satisfies Localized,
+    howIWorkTitle: {
+        en: 'How I work',
+        pt: 'Como eu trabalho',
+    } satisfies Localized,
     howIWork: {
         en: [
-            'I own features from requirements to release, together with product, design, backend and AI teams.',
-            'I build reusable components and UI patterns so the next feature is faster than the last.',
-            'I act as a technical reference: architecture decisions, code reviews, unblocking people.',
-            'I use AI-assisted workflows daily — and still understand every line that ships.',
+            'I like to understand the problem before jumping into the implementation, especially when a feature sits between product, design and engineering.',
+            "I care about the details users notice and the architecture they don't: good interactions, reusable components and code that remains understandable months later.",
+            'I take ownership of features from idea to release, working closely with product, design, backend and AI teams.',
+            "I enjoy being the person who helps connect the dots: making technical decisions, reviewing code, unblocking the team and figuring things out when there isn't an obvious answer.",
         ],
         pt: [
-            'Assumo features do requisito ao release, junto com produto, design, backend e times de IA.',
-            'Construo componentes reutilizáveis e padrões de UI para que a próxima feature saia mais rápido que a anterior.',
-            'Atuo como referência técnica: decisões de arquitetura, code review, destravar o time.',
-            'Uso fluxos de desenvolvimento com IA no dia a dia — e continuo entendendo cada linha que vai para produção.',
+            'Gosto de entender o problema antes de partir para a implementação, especialmente quando uma feature fica entre produto, design e engenharia.',
+            'Me importo tanto com os detalhes que o usuário percebe quanto com a arquitetura que ele nunca vai ver: boas interações, componentes reutilizáveis e código que continua compreensível meses depois.',
+            'Gosto de assumir ownership das features do início ao release, trabalhando de perto com produto, design, backend e IA.',
+            'Gosto de ser a pessoa que conecta os pontos: tomar decisões técnicas, revisar código, destravar o time e descobrir caminhos quando não existe uma resposta óbvia.',
         ],
     } satisfies Localized<string[]>,
     offTheClock: {
-        en: 'Off the clock: cats, and more editor themes than anyone needs.',
-        pt: 'Fora do trabalho: gatos, e mais temas de editor do que alguém precisa.',
+        en: 'Off the clock: cats, games, drawing, and an unreasonable number of editor themes.',
+        pt: 'Fora do trabalho: gatos, jogos, desenho e uma quantidade injustificável de temas de editor.',
     } satisfies Localized,
     photoAlt: {
         en: 'Marcelle working on a laptop at a café table in São Paulo',

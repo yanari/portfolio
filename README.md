@@ -1,8 +1,5 @@
-<h1 align="center">🐈 Marcelle Yanari's Portfolio</h1>
-<p align="center">Hey! I'm Marcelle Yanari — a passionate frontend & mobile developer who loves clean code, pastel VSCode themes, and cats.</p>
-<p align="center">I’ve been working with tech since 2019 and I’m always finding creative ways to make apps that are fast, fun, and user-friendly.</p>
-
-<p align="center">This portfolio is where I keep my digital playground — it showcases my latest work, my experience, and gives people an easy way to connect with me.</p>
+<h1 align="center">🐈 Marcelle Yanari — Portfolio</h1>
+<p align="center">Senior Frontend & Mobile Developer. This portfolio is a code editor you scroll through.</p>
 
 <p align="center">
   <a href="https://portfolio-yanari.vercel.app"><strong>🌐 Visit Live Site</strong></a>
@@ -12,55 +9,43 @@
   <img src="preview.gif" alt="Demo of the portfolio" width="100%" />
 </p>
 
-## 📦 What's Inside?
+## What's inside
 
-### 🔍 Sections
-- 💼 Projects
-- 🧠 Skills
-- 🚀 Experience
-- 📬 Contact Me
+Each section is a "file" in an editor workspace:
 
-### 🔧 Built With
-- [Next.js](https://nextjs.org/)
-- [Tailwind CSS](https://tailwindcss.com/)
-- [Framer Motion](https://www.framer.com/motion/)
-- [Radix UI](https://www.radix-ui.com/) for accessible UI components
-- [Next Themes](https://github.com/pacocoursey/next-themes) for theme switching
-- [Vercel](https://vercel.com/) for deployment
+| File             | Section                                                |
+| ---------------- | ------------------------------------------------------ |
+| `profile.ts`     | Who I am, rendered as a typed object                   |
+| `README.md`      | About me                                               |
+| `projects/`      | Work and personal projects, browsable like a file tree |
+| `experience.log` | Career as a `git log`                                  |
+| `stack.json`     | Skills grouped by what I do with them                  |
+| `contact.sh`     | Contact links and form                                 |
 
-### 🔮 Features
-- 🎨 Dynamic **theme switcher** based on VSCode themes (Dracula, Synthwave, Atom One Dark)
-- 📱 **Responsive design** for mobile and desktop
-- 🎬 Smooth **animations** across pages
-- 🌈 Entire site adapts to the selected theme — not just colors
+- 🎨 Editor themes (Atom One Dark, Dracula, SynthWave '84), each a full palette for workbench + syntax
+- 🌎 English (`/`) and Portuguese (`/pt`)
+- 📱 Responsive workbench: docked explorer on desktop, overlay on tablet, tabs on mobile
+- ♿ Keyboard navigation, visible focus, reduced motion, WCAG AA contrast in every theme
+- ⚡ Static pages, zero syntax-highlighting JS
 
----
+## Built with
 
-## 🧪 How to Run Locally
+[Next.js](https://nextjs.org/) · [Tailwind CSS](https://tailwindcss.com/) · [next-themes](https://github.com/pacocoursey/next-themes) · [Radix UI](https://www.radix-ui.com/) · [Formspree](https://formspree.io/) · [Vercel](https://vercel.com/)
+
+## Editing content
+
+All copy lives in `content/` (`profile.ts`, `about.ts`, `projects.ts`, `experience.ts`, `stack.ts`, `i18n.ts`), with English and Portuguese side by side. Optional project fields that are left out simply don't render. `TODO(marcelle)` marks things only I can fill in.
+
+## Adding a theme
+
+1. Create `themes/my-theme.ts` exporting an `EditorTheme` (see `themes/types.ts`)
+2. Register it in `themes/index.ts`
+
+The CSS variables and the theme picker are generated from that registry.
+
+## Run locally
 
 ```bash
-# Clone the repo
-git clone https://github.com/yanari/portfolio.git
-
-# Move into the folder
-cd portfolio
-
-# Install dependencies
-npm install
-
-# Run the dev server
-npm run dev
-````
-
-Now open http://localhost:3000 in your browser 🚀
-
-## 🗺️ Roadmap / Coming Soon
-- 🗂️ Route for browsing all projects
-
-- ♿ Accessibility improvements to the theme picker (Headless UI or Radix)
-
-- 🎈 “Contact Me” section with more personality and interactivity
-
-## 💌 Want to Chat?
-If you have feedback, suggestions, or just want to say hi, feel free to [open an issue](https://github.com/yanari/portfolio/issues) or reach out!
-
+pnpm install
+pnpm dev
+```

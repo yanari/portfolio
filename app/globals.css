@@ -1,157 +1,162 @@
 @import 'tailwindcss';
-@import 'tw-animate-css';
 
-/* Themes */
-
-:root {
-    --primary: #1e293b;
-    --primary-foreground: #f8fafc;
-}
-html[data-theme='atom-one-dark'] {
-    --background: #282c34;
-
-    --primary: #98c379;
-    --secondary: #c678dd;
-    --primary-foreground: #282a36;
-}
-
-html[data-theme='dracula'] {
-    --background: #282a36;
-
-    --primary: #8be9fd;
-    --secondary: #f1fa8c;
-    --primary-foreground: #282a36;
-}
-html[data-theme='synthwave84'] {
-    --background: #282a36;
-
-    --primary: #f92aad;
-    --secondary: #72f1b8;
-    --primary-foreground: #282a36;
-    /* TODO: implement text-shadow */
-    --shadow-primary: rgb(16, 12, 15) 0px 0px 2px,
-        rgba(220, 7, 142, 0.2) 0px 0px 5px,
-        rgba(255, 255, 255, 0.2) 0px 0px 10px;
-}
-
-@layer base {
-}
-
-.goo-effect {
-    filter: url('#goo');
-}
-
-@layer utilities {
-    .project-big {
-        clip-path: polygon(100% 0, 100% 50%, 65% 50%, 65% 100%, 0 100%, 0 0);
-    }
-
-    .last-section-goo {
-        clip-path: polygon(
-            0% 0%,
-            100% 0%,
-            100% 50%,
-            69% 50%,
-            69% 100%,
-            0% 100%
-        );
-    }
-
-    .first-section-goo {
-        clip-path: polygon(
-            32% 0%,
-            100% 0%,
-            100% 100%,
-            0% 100%,
-            0% 50%,
-            32% 50%
-        );
-    }
-}
-
-@custom-variant dark (&:is(.dark *));
-
+/*
+ * Theme colors are CSS variables generated from `themes/*.ts` (see
+ * `themes/index.ts`) and injected in the document head. Nothing here should
+ * hardcode a color.
+ */
 @theme inline {
-    --color-background: var(--background);
-    --color-foreground: var(--foreground);
-    --font-sans: var(--font-geist-sans);
-    --font-mono: var(--font-mono);
-    --color-sidebar-ring: var(--sidebar-ring);
-    --color-sidebar-border: var(--sidebar-border);
-    --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
-    --color-sidebar-accent: var(--sidebar-accent);
-    --color-sidebar-primary-foreground: var(--sidebar-primary-foreground);
-    --color-sidebar-primary: var(--sidebar-primary);
-    --color-sidebar-foreground: var(--sidebar-foreground);
+    --color-editor: var(--editor);
     --color-sidebar: var(--sidebar);
-    --color-chart-5: var(--chart-5);
-    --color-chart-4: var(--chart-4);
-    --color-chart-3: var(--chart-3);
-    --color-chart-2: var(--chart-2);
-    --color-chart-1: var(--chart-1);
-    --color-ring: var(--ring);
-    --color-input: var(--input);
+    --color-activity: var(--activity-bar);
+    --color-tabbar: var(--tab-bar);
+    --color-status: var(--status-bar);
+    --color-status-fg: var(--status-bar-foreground);
+    --color-hover: var(--hover);
+    --color-selection: var(--selection);
+    --color-line: var(--line-highlight);
     --color-border: var(--border);
-    --color-destructive: var(--destructive);
-    --color-accent-foreground: var(--accent-foreground);
-    --color-accent: var(--accent);
-    --color-muted-foreground: var(--muted-foreground);
+    --color-fg: var(--foreground);
     --color-muted: var(--muted);
-    --color-secondary-foreground: var(--secondary-foreground);
-    --color-secondary: var(--secondary);
-    --color-primary-foreground: var(--primary-foreground);
+    --color-subtle: var(--subtle);
     --color-primary: var(--primary);
-    --color-popover-foreground: var(--popover-foreground);
-    --color-popover: var(--popover);
-    --color-card-foreground: var(--card-foreground);
-    --color-card: var(--card);
-    --radius-sm: calc(var(--radius) - 4px);
-    --radius-md: calc(var(--radius) - 2px);
-    --radius-lg: var(--radius);
-    --radius-xl: calc(var(--radius) + 4px);
+    --color-primary-fg: var(--primary-foreground);
+    --color-secondary: var(--secondary);
+    --color-focus: var(--focus);
+
+    --color-syn-keyword: var(--syntax-keyword);
+    --color-syn-string: var(--syntax-string);
+    --color-syn-property: var(--syntax-property);
+    --color-syn-number: var(--syntax-number);
+    --color-syn-function: var(--syntax-function);
+    --color-syn-type: var(--syntax-type);
+    --color-syn-comment: var(--syntax-comment);
+    --color-syn-punct: var(--syntax-punctuation);
+    --color-syn-operator: var(--syntax-operator);
+
+    --font-mono: var(--font-fira-mono), ui-monospace, SFMono-Regular, Menlo, monospace;
+    --font-display: var(--font-vt323), var(--font-fira-mono), monospace;
+    /* Like VS Code's markdown preview: prose in the system UI font */
+    --font-prose: system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', sans-serif;
 }
 
+/* Workbench dimensions. The explorer collapses like VS Code's sidebar. */
 :root {
-    --radius: 0.625rem;
-    --background: oklch(0.145 0 0);
-    --background: oklch(0.145 0 0);
-    --foreground: oklch(0.985 0 0);
-    --card: oklch(0.205 0 0);
-    --card-foreground: oklch(0.985 0 0);
-    --popover: oklch(0.205 0 0);
-    --popover-foreground: oklch(0.985 0 0);
-    --primary: oklch(0.922 0 0);
-    --primary-foreground: oklch(0.205 0 0);
-    --secondary: oklch(0.269 0 0);
-    --secondary-foreground: oklch(0.985 0 0);
-    --muted: oklch(0.269 0 0);
-    --muted-foreground: oklch(0.708 0 0);
-    --accent: oklch(0.269 0 0);
-    --accent-foreground: oklch(0.985 0 0);
-    --destructive: oklch(0.704 0.191 22.216);
-    --border: oklch(1 0 0 / 10%);
-    --input: oklch(1 0 0 / 15%);
-    --ring: oklch(0.556 0 0);
-    --chart-1: oklch(0.488 0.243 264.376);
-    --chart-2: oklch(0.696 0.17 162.48);
-    --chart-3: oklch(0.769 0.188 70.08);
-    --chart-4: oklch(0.627 0.265 303.9);
-    --chart-5: oklch(0.645 0.246 16.439);
-    --sidebar-background: 220 13% 15%;
-    --sidebar-foreground: 220 14% 80%;
-    --sidebar-primary: 220 100% 66%;
-    --sidebar-primary-foreground: 220 14% 96%;
-    --sidebar-accent: 220 13% 20%;
-    --sidebar-accent-foreground: 220 14% 96%;
-    --sidebar-border: 220 13% 28%;
-    --sidebar-ring: 220 100% 66%;
+    --activity-w: 0px;
+    --explorer-w: 0px;
+    --status-h: 2.5rem;
+    --tabs-h: 2.75rem;
+}
+@media (min-width: 48rem) {
+    :root {
+        --activity-w: 3rem;
+        --status-h: 1.75rem;
+        --tabs-h: 2.25rem;
+    }
+}
+@media (min-width: 64rem) {
+    :root:not([data-explorer='closed']) {
+        --explorer-w: 15rem;
+    }
 }
 
 @layer base {
-    * {
-        @apply border-border outline-ring/50;
+    html {
+        background: var(--editor);
+        scrollbar-color: var(--scrollbar) transparent;
+    }
+    @media (prefers-reduced-motion: no-preference) {
+        html {
+            scroll-behavior: smooth;
+        }
     }
     body {
-        @apply bg-background text-foreground;
+        @apply bg-editor text-fg font-mono antialiased;
+    }
+    ::selection {
+        background: var(--selection);
+        color: var(--foreground);
+    }
+    :focus-visible {
+        outline: 2px solid var(--focus);
+        outline-offset: 2px;
+    }
+    [data-section] {
+        scroll-margin-top: var(--tabs-h);
+    }
+    [id^='project-'] {
+        scroll-margin-top: calc(var(--tabs-h) + 1rem);
+    }
+    * {
+        border-color: var(--border);
+    }
+}
+
+@layer components {
+    .explorer {
+        display: none;
+    }
+    @media (min-width: 48rem) {
+        :root[data-explorer='open'] .explorer {
+            display: flex;
+        }
+    }
+    @media (min-width: 64rem) {
+        :root:not([data-explorer='closed']) .explorer {
+            display: flex;
+        }
+    }
+
+    .glow {
+        text-shadow: var(--glow);
+    }
+
+    /* A code line: gutter + content. Wrapped lines keep a hanging indent. */
+    .code-line {
+        display: grid;
+        grid-template-columns: 3ch 1fr;
+        column-gap: 1.25rem;
+    }
+    .code-line > .ln {
+        text-align: right;
+        color: var(--subtle);
+        user-select: none;
+    }
+    .code-line > .lc {
+        padding-left: calc(var(--indent, 0) * 2ch + 2ch);
+        text-indent: -2ch;
+        overflow-wrap: anywhere;
+    }
+    /* Block-level line content (headings in comments) opts out of the hanging indent */
+    .code-line > .lc > div {
+        margin-left: -2ch;
+        text-indent: 0;
+    }
+
+    .cursor {
+        display: inline-block;
+        width: 0.55em;
+        height: 1.15em;
+        vertical-align: text-bottom;
+        background: var(--primary);
+        margin-left: 2px;
+    }
+    @media (prefers-reduced-motion: no-preference) {
+        .cursor {
+            animation: blink 1.1s steps(1) infinite;
+        }
+    }
+
+    .no-scrollbar {
+        scrollbar-width: none;
+    }
+    .no-scrollbar::-webkit-scrollbar {
+        display: none;
+    }
+}
+
+@keyframes blink {
+    50% {
+        opacity: 0;
     }
 }

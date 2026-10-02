@@ -1,5 +1,5 @@
 import { Portfolio } from '@/components/site/Portfolio'
 
 export default function Home() {
-    return <Portfolio locale="en" />
+    return <Portfolio locale="pt" />
 }

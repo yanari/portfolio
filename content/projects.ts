@@ -193,19 +193,50 @@ export const projects: Project[] = [
     {
         slug: 'tim-data-platform',
         type: 'work',
-        name: 'Data monetization platform',
+        name: 'TIM data monetization platform',
         context: {
             en: 'Accenture · for TIM Brasil',
             pt: 'Accenture · para a TIM Brasil',
         },
         period: '2022 — 2024',
         status: 'delivered',
-        kind: { en: 'Cloud platform · Data', pt: 'Plataforma cloud · Dados' },
-        summary: {
-            en: 'A GCP-based data platform that unified behavioral data from 62M+ telecom customers, supporting data monetization and new business opportunities.',
-            pt: 'Uma plataforma de dados baseada em GCP que unificava dados comportamentais de mais de 62 milhões de clientes de telecom, apoiando a monetização de dados e novas oportunidades de negócio.',
+        kind: {
+            en: 'Data platform · Cloud',
+            pt: 'Plataforma de dados · Cloud',
         },
-        stack: ['GCP', 'Cloud Run', 'Pub/Sub', 'BigQuery', 'Python', 'Flask'],
+        summary: {
+            en: 'A cloud-based data platform that handled data requests from TIM\'s business clients, using Google Cloud services to process and deliver the requested datasets.',
+            pt: 'Uma plataforma de dados em cloud que processava solicitações de dados de clientes empresariais da TIM, usando serviços do Google Cloud para processar e entregar os conjuntos de dados solicitados.',
+        },
+        problem: {
+            en: 'Business clients needed a way to request specific datasets from a large collection of behavioral data while respecting limits on which fields and how much data could be delivered.',
+            pt: 'Clientes empresariais precisavam de uma forma de solicitar conjuntos específicos de dados a partir de uma grande base de informações comportamentais, respeitando limites sobre quais campos e quanto de dados poderiam ser entregues.',
+        },
+        solution: {
+            en: 'We built a cloud-based pipeline that received data requests, validated their parameters, triggered asynchronous processing and queried BigQuery to prepare the requested dataset for delivery.',
+            pt: 'Construímos um pipeline baseado em cloud que recebia solicitações de dados, validava seus parâmetros, disparava o processamento assíncrono e consultava o BigQuery para preparar o conjunto de dados solicitado para entrega.',
+        },
+        role: {
+            en: 'Co-designed the backend and cloud architecture with my manager, and implemented the data processing flow with Python, Flask and Google Cloud services.',
+            pt: 'Projetei a arquitetura de backend e cloud junto com meu gerente e implementei o fluxo de processamento de dados com Python, Flask e serviços do Google Cloud.',
+        },
+        highlights: {
+            en: [
+                'Platform built over behavioral data from 62M+ telecom customers',
+                'Designed and built the data request flow using Cloud Run, Cloud Functions and Pub/Sub',
+                'Built Python/Flask endpoints to receive and process customer data requests',
+                'Queried BigQuery to retrieve the requested fields and datasets',
+                'Implemented request constraints around fields, volume and data delivery',
+            ],
+            pt: [
+                'Plataforma construída sobre dados comportamentais de mais de 62 milhões de clientes de telecom',
+                'Projeto e desenvolvimento do fluxo de solicitação de dados usando Cloud Run, Cloud Functions e Pub/Sub',
+                'Construção de endpoints em Python/Flask para receber e processar solicitações de dados',
+                'Consulta ao BigQuery para recuperar os campos e conjuntos de dados solicitados',
+                'Implementação de limites para campos, volume e entrega dos dados solicitados',
+            ],
+        },
+        stack: ['GCP', 'Cloud Run', 'Cloud Functions', 'Pub/Sub', 'BigQuery', 'Python', 'Flask'],
     },
     {
         slug: 'neurotimer',

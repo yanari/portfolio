@@ -92,7 +92,7 @@ export function Experience({ locale }: { locale: Locale }) {
                 </div>
                 <div className="md:self-end">
                     <a
-                        href={profile.resume}
+                        href={profile.resume[locale]}
                         download
                         className="inline-flex min-h-11 items-center gap-2 text-sm text-primary underline underline-offset-4 hover:no-underline"
                     >

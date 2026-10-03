@@ -6,7 +6,8 @@
     "dev": "next dev --turbopack",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "resume": "tsx scripts/resume.mts"
   },
   "dependencies": {
     "@formspree/react": "^3.0.0",
@@ -26,9 +27,12 @@
     "@types/node": "^20",
     "@types/react": "^19",
     "@types/react-dom": "^19",
+    "docx": "^9.8.1",
     "eslint": "^9",
     "eslint-config-next": "15.5.27",
+    "playwright-core": "~1.58.2",
     "tailwindcss": "^4",
+    "tsx": "^4.23.15",
     "typescript": "^5"
   }
 }

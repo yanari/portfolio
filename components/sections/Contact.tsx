@@ -8,7 +8,8 @@ export function Contact({ locale }: { locale: Locale }) {
         { key: 'email', label: profile.email, href: `mailto:${profile.email}` },
         { key: 'linkedin', label: 'linkedin.com/in/yanari', href: profile.linkedin, external: true },
         { key: 'github', label: 'github.com/yanari', href: profile.github, external: true },
-        { key: 'resume', label: 'marcelle-yanari-resume.pdf', href: profile.resume, download: true },
+        { key: 'resume', label: profile.resume[locale].slice(1), href: profile.resume[locale], download: true },
+        { key: 'docx', label: profile.resumeDocx[locale].slice(1), href: profile.resumeDocx[locale], download: true },
     ]
 
     return (

@@ -36,6 +36,10 @@ Each section is a "file" in an editor workspace:
 
 All copy lives in `content/` (`profile.ts`, `about.ts`, `projects.ts`, `experience.ts`, `stack.ts`, `i18n.ts`), with English and Portuguese side by side. Optional project fields that are left out simply don't render. `TODO(marcelle)` marks things only I can fill in.
 
+## Resume
+
+`pnpm resume` generates ATS-friendly resumes (PDF + DOCX, English + Portuguese) into `public/` from the same `content/` files the site uses. Resume-only bullets live in `content/resume.ts`. PDF rendering uses local Chrome (`CHROME_PATH` to override).
+
 ## Adding a theme
 
 1. Create `themes/my-theme.ts` exporting an `EditorTheme` (see `themes/types.ts`)

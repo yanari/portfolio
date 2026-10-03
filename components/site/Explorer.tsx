@@ -141,7 +141,7 @@ export function Explorer({ locale }: { locale: Locale }) {
                             />
                         )
                     )}
-                    <Row href={profile.resume} kind="pdf" label="resume.pdf" download />
+                    <Row href={profile.resume[locale]} kind="pdf" label={profile.resume[locale].slice(1)} download />
                 </ul>
             </nav>
         </aside>

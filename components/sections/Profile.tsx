@@ -123,7 +123,7 @@ export function Profile({ locale }: { locale: Locale }) {
                 <a href="#contact" className={`${action} text-fg hover:border-primary hover:text-primary`}>
                     {ui.getInTouch[locale]}
                 </a>
-                <a href={profile.resume} download className={`${action} text-fg hover:border-primary hover:text-primary`}>
+                <a href={profile.resume[locale]} download className={`${action} text-fg hover:border-primary hover:text-primary`}>
                     <ArrowDown size={16} aria-hidden="true" />
                     {ui.downloadResume[locale]}
                 </a>

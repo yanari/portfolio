@@ -76,6 +76,7 @@ function build(locale: Locale) {
             school: e.school,
             period: e.period ? `${e.period.replace(' — ', '–')}${e.period.includes('2028') ? ` (${resume.inProgress[locale]})` : ''}` : '',
         })),
+        languages: resume.languages.map((l) => `${l.name[locale]} (${l.level[locale]})`).join(' · '),
         titles: Object.fromEntries(
             Object.entries(resume.sectionTitles).map(([k, v]) => [k, v[locale]])
         ) as Record<keyof typeof resume.sectionTitles, string>,
@@ -132,6 +133,9 @@ ${d.jobs
 ${d.education
     .map((e) => `<div class="row"><span><b>${esc(e.course)}</b> — ${esc(e.school)}</span><span class="meta">${esc(e.period)}</span></div>`)
     .join('')}
+
+<h2>${d.titles.languages}</h2>
+<p>${esc(d.languages)}</p>
 </body></html>`
 }
 
@@ -211,6 +215,9 @@ function docx(d: ResumeData, locale: Locale) {
                     children: [body(e.course, { bold: true }), body(` — ${e.school}`), ...(e.period ? rightTab(e.period) : [])],
                 })
         ),
+
+        sectionTitle(d.titles.languages),
+        new Paragraph({ children: [body(d.languages)] }),
     ]
 
     return new Document({

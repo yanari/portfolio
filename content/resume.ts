@@ -16,7 +16,15 @@ export const resume = {
         experience: { en: 'Experience', pt: 'Experiência' },
         skills: { en: 'Skills', pt: 'Competências' },
         education: { en: 'Education', pt: 'Formação' },
+        languages: { en: 'Languages', pt: 'Idiomas' },
     } satisfies Record<string, Localized>,
+
+    languages: [
+        { name: { en: 'Portuguese', pt: 'Português' }, level: { en: 'Native', pt: 'Nativo' } },
+        { name: { en: 'English', pt: 'Inglês' }, level: { en: 'Fluent', pt: 'Fluente' } },
+        { name: { en: 'Spanish', pt: 'Espanhol' }, level: { en: 'Intermediate', pt: 'Intermediário' } },
+        { name: { en: 'Japanese', pt: 'Japonês' }, level: { en: 'Basic', pt: 'Básico' } },
+    ] satisfies { name: Localized; level: Localized }[],
 
     /** Labels for the groups in `content/stack.ts` */
     skillLabels: {

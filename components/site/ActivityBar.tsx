@@ -34,7 +34,7 @@ export function ActivityBar({ locale }: { locale: Locale }) {
         { href: profile.github, label: 'GitHub', icon: <SiGithub size={20} />, external: true },
         { href: profile.linkedin, label: 'LinkedIn', icon: <Linkedin size={22} strokeWidth={1.5} />, external: true },
         { href: `mailto:${profile.email}`, label: 'Email', icon: <Mail size={22} strokeWidth={1.5} /> },
-        { href: profile.resume[locale], label: profile.resume[locale].slice(1), icon: <FileDown size={22} strokeWidth={1.5} />, download: true },
+        { href: profile.resume[locale], label: locale === 'en' ? 'resume.pdf' : 'currículo.pdf', icon: <FileDown size={22} strokeWidth={1.5} />, download: true },
     ]
 
     return (

@@ -10,7 +10,6 @@
     "resume": "tsx scripts/resume.mts"
   },
   "dependencies": {
-    "@formspree/react": "^3.0.0",
     "@icons-pack/react-simple-icons": "^12.6.0",
     "@radix-ui/react-dropdown-menu": "^2.1.7",
     "clsx": "^2.1.1",

@@ -30,7 +30,7 @@ Each section is a "file" in an editor workspace:
 
 ## Built with
 
-[Next.js](https://nextjs.org/) · [Tailwind CSS](https://tailwindcss.com/) · [next-themes](https://github.com/pacocoursey/next-themes) · [Radix UI](https://www.radix-ui.com/) · [Formspree](https://formspree.io/) · [Vercel](https://vercel.com/)
+[Next.js](https://nextjs.org/) · [Tailwind CSS](https://tailwindcss.com/) · [next-themes](https://github.com/pacocoursey/next-themes) · [Radix UI](https://www.radix-ui.com/) · [Web3Forms](https://web3forms.com/) · [Vercel](https://vercel.com/)
 
 ## Editing content
 
